@@ -4,591 +4,1131 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Furry Friends · Pet Grooming in JVC, Dubai</title>
-<meta name="description" content="Pet grooming in Jumeirah Village Circle, Dubai, for 6 years. Dogs, cats, birds and small pets — in our shop or at your door. Book on WhatsApp, day or night.">
+<meta name="description" content="Pet grooming in Jumeirah Village Circle, Dubai. Dogs, cats and small pets — in our JVC shop or at your door. 4.3★ from 340 Google reviews. Book on WhatsApp in under a minute.">
 <meta name="theme-color" content="#100F0D">
 <meta name="robots" content="noindex"><!-- a preview for the owner: remove once it is their live site -->
 <meta property="og:type" content="website">
 <meta property="og:title" content="Furry Friends · Pet Grooming in JVC">
-<meta property="og:description" content="Dogs, cats, birds and small pets — in our shop or at your door. Book on WhatsApp, day or night.">
+<meta property="og:description" content="Dogs, cats and small pets — in our JVC shop or at your door. Book on WhatsApp in under a minute.">
 <meta property="og:url" content="__SITE_URL__">
 <meta property="og:image" content="__SITE_URL__og.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23100F0D'/%3E%3Ctext x='11' y='47' font-family='Arial Black,Arial' font-weight='900' font-size='40' fill='%23F4EEE3'%3EF%3C/text%3E%3Ccircle cx='46' cy='43' r='5' fill='%23FFC53D'/%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23100F0D'/%3E%3Cellipse cx='32' cy='41' rx='11' ry='10' fill='%23FFC53D'/%3E%3Ccircle cx='17' cy='28' r='6' fill='%23FFC53D'/%3E%3Ccircle cx='47' cy='28' r='6' fill='%23FFC53D'/%3E%3Ccircle cx='25' cy='16' r='5.5' fill='%23FFC53D'/%3E%3Ccircle cx='39' cy='16' r='5.5' fill='%23FFC53D'/%3E%3C/svg%3E">
+<link rel="preload" as="image" href="photos/c_golden.webp">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&family=Alexandria:wght@600;800&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Fraunces:ital,opsz,wght,SOFT@1,9..144,500..700,100&family=Instrument+Sans:wght@400;500;600;700&family=Alexandria:wght@500;700;800&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root {
     --bg: #100F0D;
     --bg-2: #181613;
+    --bg-3: #221F1B;
     --ink: #F4EEE3;
-    --dim: rgba(244, 238, 227, .68);
-    --faint: rgba(244, 238, 227, .42);
-    --line: rgba(244, 238, 227, .14);
+    --dim: rgba(244, 238, 227, .7);
+    --faint: rgba(244, 238, 227, .46);
+    --line: rgba(244, 238, 227, .13);
     --accent: #FFC53D;
+    --accent-deep: #EFAE1C;
     --accent-ink: #1C1404;
     --display: 'Bricolage Grotesque', 'Arial Black', system-ui, sans-serif;
+    --serif: 'Fraunces', Georgia, serif;
     --body: 'Instrument Sans', system-ui, -apple-system, sans-serif;
     --gutter: clamp(18px, 4vw, 56px);
-    --track: -.042em;
+    --max: 1320px;
+    --r: 28px;
+    --track: -.045em;
+    --ease: cubic-bezier(.22, 1, .36, 1);
+    --spring: cubic-bezier(.34, 1.56, .64, 1);
+    --floor: clamp(62px, 9vh, 92px);
   }
   html[lang="ar"] {
     --display: 'Alexandria', 'Bricolage Grotesque', system-ui, sans-serif;
+    --serif: 'Alexandria', system-ui, sans-serif;
     --body: 'IBM Plex Sans Arabic', 'Instrument Sans', system-ui, sans-serif;
     --track: 0;
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
-  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
-  body { background: var(--bg); color: var(--ink); font: 400 17px/1.55 var(--body); overflow-x: hidden; -webkit-font-smoothing: antialiased; }
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; scroll-padding-top: 84px; }
+  body { background: var(--bg); color: var(--ink); font: 400 17px/1.6 var(--body); overflow-x: hidden; -webkit-font-smoothing: antialiased; }
+  img { display: block; max-width: 100%; }
   a { color: inherit; text-decoration: none; }
   button { font: inherit; color: inherit; background: none; border: 0; cursor: pointer; }
+  input, textarea { font: inherit; color: inherit; }
+  fieldset { border: 0; min-width: 0; }
+  [hidden] { display: none !important; }
   ::selection { background: var(--accent); color: var(--accent-ink); }
+  :focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 8px; }
+  .wrap { width: min(100% - 2 * var(--gutter), var(--max)); margin-inline: auto; }
   .brand { font-family: 'Bricolage Grotesque', sans-serif; letter-spacing: -.04em; direction: ltr; unicode-bidi: isolate; }
+  .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  html[dir="rtl"] .flip { transform: scaleX(-1); }
 
   /* ── Type ── */
-  .mega { font: 800 clamp(58px, 12vw, 184px)/.86 var(--display); letter-spacing: var(--track); }
-  .h2 { font: 800 clamp(44px, 8.2vw, 120px)/.9 var(--display); letter-spacing: var(--track); }
-  html[lang="ar"] .mega { font-size: clamp(50px, 9.6vw, 150px); line-height: 1.12; }
-  html[lang="ar"] .h2 { font-size: clamp(40px, 6.8vw, 100px); line-height: 1.15; }
+  .mega { font: 800 clamp(54px, 8vw, 140px)/.86 var(--display); letter-spacing: var(--track); }
+  .h2 { font: 800 clamp(42px, 6.6vw, 104px)/.9 var(--display); letter-spacing: var(--track); }
+  .serif { font-family: var(--serif); font-style: italic; font-weight: 600; letter-spacing: -.02em; font-variation-settings: 'SOFT' 100; }
+  html[lang="ar"] .serif { font-style: normal; font-weight: 800; letter-spacing: 0; }
+  html[lang="ar"] .mega { font-size: clamp(46px, 7vw, 120px); line-height: 1.14; }
+  html[lang="ar"] .h2 { font-size: clamp(36px, 5.4vw, 86px); line-height: 1.2; }
   .kicker { font: 600 13px/1.3 var(--body); letter-spacing: .16em; text-transform: uppercase; color: var(--dim); }
   html[lang="ar"] .kicker { letter-spacing: 0; font-size: 15px; }
   .accent { color: var(--accent); }
-  .lede { font-size: clamp(17px, 1.6vw, 21px); line-height: 1.5; color: var(--dim); max-width: 34ch; }
+  .lede { font-size: clamp(17px, 1.5vw, 20px); line-height: 1.55; color: var(--dim); max-width: 40ch; }
 
   /* ── Buttons ── */
-  .btn { display: inline-flex; align-items: center; gap: 10px; min-height: 54px; padding: 0 24px; border-radius: 13px; background: var(--accent); color: var(--accent-ink); font: 700 16.5px/1 var(--body); transition: transform .25s cubic-bezier(.2,.8,.2,1), background .2s; cursor: pointer; }
-  .btn:hover { transform: translateY(-2px); background: #FFD261; }
-  .btn:active { transform: translateY(0) scale(.98); }
+  .btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 52px; padding: 0 24px; border-radius: 16px; background: var(--accent); color: var(--accent-ink); font: 700 16px/1 var(--body); transition: transform .25s var(--spring), background .2s, box-shadow .25s, opacity .2s; box-shadow: 0 2px 0 var(--accent-deep), 0 14px 30px -14px rgba(255, 197, 61, .55); }
+  .btn:hover { transform: translateY(-2px); background: #FFD066; }
+  .btn:active { transform: translateY(1px); }
   .btn svg { width: 20px; height: 20px; fill: currentColor; flex: none; }
-  .textlink { display: inline-flex; align-items: center; gap: 8px; min-height: 54px; font-weight: 600; color: var(--ink); }
-  .textlink:hover { color: var(--accent); }
-  :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 6px; }
-
-  /* ── Top bar ── */
-  .top { position: absolute; z-index: 5; inset: 0 0 auto 0; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: calc(18px + env(safe-area-inset-top)) var(--gutter) 0; }
-  .logo { font-weight: 800; font-size: 22px; line-height: 1; }
-  .logo span { color: var(--accent); }
-  .top nav { display: flex; align-items: center; gap: 26px; font-weight: 500; font-size: 15px; color: var(--dim); }
-  .top nav a:hover, .lang:hover { color: var(--ink); }
-  .lang { min-height: 44px; padding: 0 4px; font-weight: 600; font-size: 15px; color: var(--dim); }
-  .lang [lang="ar"] { font-family: 'IBM Plex Sans Arabic', sans-serif; }
-  .top .btn { min-height: 44px; padding: 0 18px; font-size: 15px; }
-  @media (max-width: 760px) { .top nav .navlink { display: none; } .top nav { gap: 14px; } }
-
-  /* ── Hero ── */
-  .hero { position: relative; min-height: 100svh; display: flex; align-items: flex-end; overflow: hidden; isolation: isolate; }
-  .hero-img { position: absolute; inset: -6% 0 0 0; z-index: -2; background: 60% 36% / cover no-repeat; transform: translate3d(0, var(--py, 0px), 0) scale(1.06); will-change: transform; }
-  @media (max-width: 760px) { .hero-img { background-position: 66% 18%; inset: -4% 0 26% 0; } }
-  .hero::before { content: ''; position: absolute; inset: 0; z-index: -1;
-    background:
-      radial-gradient(120% 80% at 70% 30%, rgba(16,15,13,0) 0%, rgba(16,15,13,.3) 55%, rgba(16,15,13,.85) 100%),
-      linear-gradient(180deg, rgba(16,15,13,.55) 0%, rgba(16,15,13,0) 28%, rgba(16,15,13,.5) 60%, var(--bg) 100%); }
-  @media (max-width: 760px) { .hero::before { background: linear-gradient(180deg, rgba(16,15,13,.5) 0%, rgba(16,15,13,0) 22%, rgba(16,15,13,.35) 48%, var(--bg) 74%); } }
-  .hero-copy { width: 100%; padding: 0 var(--gutter) clamp(36px, 7vh, 84px); }
-  .hero .kicker { margin-bottom: 22px; }
-  .hero .mega { margin-bottom: 26px; max-width: 11.5ch; }
-  .hero-row { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 26px 40px; }
-  .hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 22px; margin-top: 26px; }
-  .facts { display: grid; gap: 4px; font-size: 15px; color: var(--dim); text-align: end; }
-  .facts b { color: var(--ink); font-weight: 600; }
-  .status { display: inline-flex; align-items: center; justify-content: flex-end; gap: 8px; }
-  .status i { width: 7px; height: 7px; border-radius: 50%; background: var(--accent); }
-  .status.shut i { background: var(--faint); }
-  @media (max-width: 760px) { .facts { text-align: start; } .status { justify-content: flex-start; } }
-
-  /* ── Marquee ── */
-  .marquee { border-block: 1px solid var(--line); overflow: hidden; padding: 22px 0; direction: ltr; }
-  .marquee-track { display: flex; width: max-content; animation: slide 40s linear infinite; }
-  .marquee span { font: 700 clamp(26px, 3.6vw, 52px)/1.1 var(--display); letter-spacing: var(--track); white-space: nowrap; padding-right: .9em; }
-  .marquee span i { font-style: normal; color: var(--accent); padding-left: .9em; }
-  @keyframes slide { to { transform: translateX(-50%); } }
-
-  /* ── Numbers ── */
-  .numbers { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); padding: clamp(56px, 8vw, 110px) var(--gutter) 0; }
-  .numbers div { padding: 0 24px 0 0; }
-  .numbers div + div { padding-inline-start: 24px; border-inline-start: 1px solid var(--line); }
-  .numbers b { display: block; font: 800 clamp(56px, 9vw, 132px)/.9 'Bricolage Grotesque', sans-serif; letter-spacing: -.045em; }
-  .numbers b small { font-size: .42em; letter-spacing: -.02em; color: var(--accent); margin-inline-start: .08em; }
-  .numbers span { display: block; margin-top: 12px; color: var(--dim); font-size: 15.5px; max-width: 22ch; }
-  @media (max-width: 640px) { .numbers { grid-template-columns: 1fr; gap: 28px; } .numbers div + div { padding-inline-start: 0; border-inline-start: 0; border-top: 1px solid var(--line); padding-top: 28px; } }
-
-  /* ── Sections ── */
-  section { padding: clamp(84px, 13vw, 180px) var(--gutter); }
-  .tight { padding-top: 0; }
-  .head { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 22px 40px; margin-bottom: clamp(40px, 6vw, 80px); }
-  .head .kicker { margin-bottom: 18px; }
-  .head p { max-width: 36ch; color: var(--dim); }
-
-  /* ── Booking: steps + a chat ── */
-  .book { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); gap: clamp(40px, 6vw, 96px); align-items: center; }
-  @media (max-width: 920px) { .book { grid-template-columns: 1fr; } }
-  .steps { list-style: none; border-top: 1px solid var(--line); margin-top: clamp(32px, 4vw, 56px); }
-  .steps li { display: grid; grid-template-columns: 74px 1fr; gap: 6px 18px; padding: 26px 0; border-bottom: 1px solid var(--line); }
-  .steps .no { font: 800 15px/1.9 'Bricolage Grotesque', sans-serif; color: var(--accent); }
-  .steps h3 { font: 700 clamp(22px, 2.4vw, 30px)/1.2 var(--display); letter-spacing: var(--track); }
-  .steps p { grid-column: 2; color: var(--dim); }
-
-  .phone { position: relative; width: min(380px, 100%); margin: 0 auto; border-radius: 34px; padding: 12px; background: #0A0A09; box-shadow: 0 0 0 1px var(--line), 0 40px 80px rgba(0,0,0,.5); }
-  .screen { border-radius: 24px; overflow: hidden; background: #0B141A; }
-  .wa-top { display: flex; align-items: center; gap: 12px; padding: 14px 16px; background: #1F2C34; }
-  .wa-top .av { width: 38px; height: 38px; border-radius: 50%; background: #2A3942 center / cover no-repeat; flex: none; }
-  .wa-top b { display: block; font-size: 15.5px; font-weight: 600; color: #E9EDEF; }
-  .wa-top small { font-size: 12.5px; color: #8696A0; }
-  .chat { display: flex; flex-direction: column; gap: 8px; padding: 18px 14px 22px; min-height: 440px; }
-  .msg { max-width: 84%; padding: 9px 12px 20px; border-radius: 12px; font-size: 15px; line-height: 1.45; position: relative; color: #E9EDEF; opacity: 0; transform: translateY(10px); transition: opacity .45s, transform .45s cubic-bezier(.2,.8,.2,1); }
-  .msg.in { opacity: 1; transform: none; }
-  .msg time { position: absolute; inset-inline-end: 10px; bottom: 5px; font-size: 11px; color: rgba(233,237,239,.6); }
-  .them { align-self: flex-start; background: #202C33; border-start-start-radius: 4px; }
-  .us { align-self: flex-end; background: #005C4B; border-start-end-radius: 4px; }
-  .typing { align-self: flex-end; display: none; gap: 4px; padding: 12px 14px; border-radius: 12px; background: #005C4B; }
-  .typing.on { display: flex; }
-  .typing i { width: 7px; height: 7px; border-radius: 50%; background: rgba(233,237,239,.75); animation: dot 1s infinite; }
-  .typing i:nth-child(2) { animation-delay: .15s; } .typing i:nth-child(3) { animation-delay: .3s; }
-  @keyframes dot { 0%, 60%, 100% { opacity: .3; transform: translateY(0); } 30% { opacity: 1; transform: translateY(-3px); } }
-  .phone-note { margin-top: 18px; text-align: center; font-size: 14px; color: var(--faint); }
-
-  /* ── Prices: numbered rows ── */
-  .rows { border-top: 1px solid var(--line); }
-  .row { display: grid; grid-template-columns: 64px minmax(0, 1fr) 150px 190px 96px; align-items: center; gap: 18px; padding: 28px 0; border-bottom: 1px solid var(--line); transition: padding .35s cubic-bezier(.2,.8,.2,1); }
-  .row .no { font: 800 15px/1 'Bricolage Grotesque', sans-serif; color: var(--faint); }
-  .row .name { font: 700 clamp(22px, 2.7vw, 38px)/1.12 var(--display); letter-spacing: var(--track); }
-  .row .name small { display: block; margin-top: 8px; font: 400 15px/1.45 var(--body); letter-spacing: 0; color: var(--dim); }
-  .row .time { color: var(--dim); font-size: 15px; }
-  .row .price { font: 700 clamp(20px, 2vw, 26px)/1.1 var(--display); letter-spacing: 0; text-align: end; white-space: nowrap; }
-  .row .price small { font: 500 13px/1 var(--body); color: var(--faint); margin-inline-end: 6px; }
-  .row .go { justify-self: end; font-weight: 600; font-size: 15px; color: var(--accent); white-space: nowrap; }
-  .row:hover { padding-inline-start: 14px; }
-  .row:hover .no { color: var(--accent); }
-  @media (max-width: 860px) {
-    .row { grid-template-columns: 40px minmax(0, 1fr) auto; grid-template-areas: "no name price" "no time go"; row-gap: 10px; column-gap: 14px; }
-    .row .no { grid-area: no; align-self: start; padding-top: 6px; }
-    .row .name { grid-area: name; } .row .price { grid-area: price; align-self: start; padding-top: 4px; }
-    .row .time { grid-area: time; } .row .go { grid-area: go; }
-    .row:hover { padding-inline-start: 0; }
-  }
-  .note { margin-top: 26px; color: var(--faint); font-size: 15px; }
-  .thumb { position: fixed; z-index: 20; left: 0; top: 0; width: 260px; height: 190px; border-radius: 16px; pointer-events: none; background: center / cover no-repeat; opacity: 0; transform: translate(-50%, -50%) scale(.85) rotate(-3deg); transition: opacity .25s, transform .35s cubic-bezier(.2,.8,.2,1); box-shadow: 0 30px 60px rgba(0,0,0,.45); }
-  .thumb.on { opacity: 1; transform: translate(-50%, -50%) scale(1) rotate(-3deg); }
-  @media (hover: none) { .thumb { display: none; } }
-
-  /* ── Feature splits ── */
-  .split { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(32px, 6vw, 96px); align-items: center; }
-  .split.flip .pic { order: 2; }
-  @media (max-width: 860px) { .split { grid-template-columns: 1fr; } .split.flip .pic { order: 0; } }
-  .pic { border-radius: 20px; aspect-ratio: 4 / 5; background: var(--bg-2) center / cover no-repeat; }
-  .pic.wide { aspect-ratio: 4 / 3.4; }
-  .split .h2 { margin: 18px 0 24px; }
-  .split p { color: var(--dim); max-width: 38ch; margin-bottom: 30px; }
-  .ticks { list-style: none; margin: -6px 0 32px; display: grid; gap: 10px; }
-  .ticks li { display: flex; gap: 12px; align-items: baseline; }
-  .ticks li::before { content: '—'; color: var(--accent); font-weight: 700; }
-
-  /* ── Gallery strip ── */
-  .strip { display: flex; gap: 14px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 0 var(--gutter) 54px; scrollbar-width: none; }
-  .strip::-webkit-scrollbar { display: none; }
-  .strip div { flex: none; width: clamp(220px, 28vw, 380px); aspect-ratio: 3 / 4; border-radius: 18px; background: var(--bg-2) center / cover no-repeat; scroll-snap-align: start; }
-  .strip div:nth-child(even) { transform: translateY(48px); }
-
-  /* ── Reviews ── */
-  .quote { font: 700 clamp(26px, 3.6vw, 52px)/1.18 'Bricolage Grotesque', sans-serif; letter-spacing: -.03em; max-width: 26ch; direction: ltr; text-align: left; }
-  html[lang="ar"] .quote { margin-inline-start: auto; }
-  .quote::before { content: '“'; color: var(--accent); }
-  .quote::after { content: '”'; color: var(--accent); }
-  .by { margin-top: 22px; color: var(--dim); font-size: 15px; direction: ltr; text-align: left; }
-  html[lang="ar"] .by { text-align: right; }
-  .stars { color: var(--accent); letter-spacing: .12em; margin-inline-end: 10px; }
-  .more { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); margin-top: clamp(48px, 6vw, 80px); border-top: 1px solid var(--line); }
-  .more div { padding-top: 26px; padding-inline-end: 24px; }
-  .more div + div { padding-inline-start: 24px; border-inline-start: 1px solid var(--line); }
-  .more p { font: 600 19px/1.35 'Bricolage Grotesque', sans-serif; letter-spacing: -.015em; direction: ltr; }
-  .more span { display: block; margin-top: 12px; color: var(--faint); font-size: 14px; direction: ltr; }
-  html[lang="ar"] .more p, html[lang="ar"] .more span { text-align: right; }
-  @media (max-width: 860px) { .more { grid-template-columns: 1fr 1fr; row-gap: 26px; } .more div:nth-child(3) { padding-inline-start: 0; border-inline-start: 0; } }
-  @media (max-width: 480px) { .more { grid-template-columns: 1fr; } .more div + div { padding-inline-start: 0; border-inline-start: 0; border-top: 1px solid var(--line); } }
-  .review-top { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 340px); gap: clamp(32px, 6vw, 96px); align-items: end; }
-  .review-top .pic { aspect-ratio: 4 / 5; }
-  @media (max-width: 860px) { .review-top { grid-template-columns: 1fr; } .review-top .pic { max-width: 320px; } }
-
-  /* ── Questions ── */
-  .faq { border-top: 1px solid var(--line); }
-  .faq details { border-bottom: 1px solid var(--line); }
-  .faq summary { list-style: none; display: flex; align-items: center; justify-content: space-between; gap: 20px; min-height: 76px; padding: 18px 0; cursor: pointer; font: 700 clamp(20px, 2.2vw, 28px)/1.25 var(--display); letter-spacing: var(--track); }
-  .faq summary::-webkit-details-marker { display: none; }
-  .faq summary::after { content: '+'; flex: none; font: 500 30px/1 var(--body); color: var(--accent); transition: transform .3s; }
-  .faq details[open] summary::after { transform: rotate(45deg); }
-  .faq details p { max-width: 60ch; padding: 0 0 26px; color: var(--dim); }
-
-  /* ── Visit ── */
-  .visit { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 1px solid var(--line); }
-  .visit > div { padding: 30px 0; padding-inline-end: 26px; border-bottom: 1px solid var(--line); }
-  .visit > div + div { padding-inline-start: 26px; border-inline-start: 1px solid var(--line); }
-  .visit .kicker { margin-bottom: 16px; }
-  .visit p:not(.kicker) { font: 700 clamp(21px, 2.2vw, 30px)/1.25 var(--display); letter-spacing: var(--track); }
-  .visit .textlink { min-height: 44px; margin-top: 12px; color: var(--accent); font-size: 15.5px; }
-  @media (max-width: 860px) { .visit { grid-template-columns: 1fr; } .visit > div + div { padding-inline-start: 0; border-inline-start: 0; } }
-
-  /* ── Closing logotype ── */
-  .closing { padding: clamp(70px, 10vw, 140px) var(--gutter) 0; overflow: hidden; text-align: center; }
-  .closing .h2 { max-width: 14ch; margin: 0 auto 34px; }
-  .closing .btn { margin-bottom: clamp(60px, 9vw, 120px); }
-  .giant { font: 800 clamp(60px, 16.5vw, 290px)/.82 'Bricolage Grotesque', sans-serif; letter-spacing: -.05em; white-space: nowrap; direction: ltr; }
-  .giant span { color: var(--accent); }
-  .giant.mirror { transform: scaleY(-1); opacity: .5; -webkit-mask-image: linear-gradient(to top, rgba(0,0,0,.55), transparent 62%); mask-image: linear-gradient(to top, rgba(0,0,0,.55), transparent 62%); margin-top: 6px; }
-  footer { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px 30px; padding: 26px var(--gutter) calc(110px + env(safe-area-inset-bottom)); border-top: 1px solid var(--line); font-size: 14px; color: var(--faint); }
-
-  /* ── Sticky booking bar ── */
-  .dock { position: fixed; z-index: 30; left: 50%; bottom: calc(14px + env(safe-area-inset-bottom)); width: min(560px, calc(100% - 28px)); display: flex; align-items: center; justify-content: space-between; gap: 14px; padding: 10px; padding-inline-start: 20px; border-radius: 18px; background: rgba(24,22,19,.94); -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px); box-shadow: 0 0 0 1px var(--line), 0 18px 40px rgba(0,0,0,.4); transform: translate(-50%, 140%); transition: transform .5s cubic-bezier(.2,.8,.2,1); }
-  .dock.on { transform: translate(-50%, 0); }
-  .dock p { font-size: 14.5px; line-height: 1.3; color: var(--dim); }
-  .dock p b { display: block; color: var(--ink); font-weight: 600; }
-  .dock .btn { min-height: 48px; padding: 0 18px; flex: none; }
-  @media (max-width: 420px) { .dock p { display: none; } .dock { padding: 8px; } .dock .btn { width: 100%; justify-content: center; } }
+  .btn.ghost { background: transparent; color: var(--ink); box-shadow: inset 0 0 0 1.5px var(--line); }
+  .btn.ghost:hover { box-shadow: inset 0 0 0 1.5px var(--ink); background: transparent; }
+  .btn.wait { opacity: .45; box-shadow: none; }
+  .btn.wait:hover { transform: none; background: var(--accent); }
+  .textlink { color: var(--accent); font-weight: 600; border-bottom: 1.5px solid transparent; transition: border-color .2s; }
+  .textlink:hover { border-color: currentColor; }
 
   /* ── Reveal on scroll ── */
-  .rv { opacity: 0; transform: translateY(34px); transition: opacity .9s cubic-bezier(.2,.8,.2,1), transform .9s cubic-bezier(.2,.8,.2,1); transition-delay: var(--d, 0s); }
+  .rv { opacity: 0; transform: translateY(26px); transition: opacity .8s var(--ease) var(--d, 0s), transform .9s var(--ease) var(--d, 0s); }
   .rv.in { opacity: 1; transform: none; }
-  .hero .rv { transition-duration: 1.1s; }
+
+  /* ── Nav ── */
+  .nav { position: fixed; z-index: 50; inset: 10px var(--gutter) auto; display: flex; align-items: center; gap: 18px; height: 62px; padding-inline: 20px 10px; border-radius: 20px; transition: background .3s, box-shadow .3s; }
+  .nav.solid { background: rgba(24, 22, 19, .82); backdrop-filter: blur(16px) saturate(1.4); -webkit-backdrop-filter: blur(16px) saturate(1.4); box-shadow: inset 0 0 0 1px var(--line); }
+  .logo { font: 800 22px/1 'Bricolage Grotesque', sans-serif; letter-spacing: -.05em; margin-inline-end: auto; direction: ltr; }
+  .logo i { font-style: normal; color: var(--accent); }
+  .navlink { font-weight: 500; font-size: 15px; color: var(--dim); padding: 8px 4px; transition: color .2s; }
+  .navlink:hover { color: var(--ink); }
+  .lang { min-width: 44px; min-height: 44px; padding: 0 10px; border-radius: 12px; font-weight: 600; font-size: 15px; color: var(--ink); }
+  .lang:hover { background: rgba(244, 238, 227, .08); }
+  html[lang="en"] .lang { font-family: 'IBM Plex Sans Arabic', sans-serif; }
+  .nav .btn { min-height: 44px; padding: 0 18px; font-size: 15px; border-radius: 13px; }
+  @media (max-width: 860px) { .navlink { display: none; } .nav { gap: 8px; } }
+
+  /* ── Hero ── */
+  .hero { position: relative; min-height: max(100svh, 700px); display: grid; grid-template-rows: auto 1fr auto; overflow: clip; isolation: isolate; }
+  .hero::before { content: ''; position: absolute; inset: 0; z-index: -1; background: radial-gradient(60% 55% at 74% 78%, rgba(255, 197, 61, .17), transparent 70%), radial-gradient(50% 40% at 10% 0%, rgba(244, 238, 227, .05), transparent 70%); }
+  .grain { position: absolute; inset: 0; z-index: -1; opacity: .07; pointer-events: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E"); }
+  .hero-copy { padding-top: clamp(100px, 14vh, 150px); position: relative; z-index: 3; }
+  .status { display: inline-flex; flex-wrap: wrap; align-items: center; gap: 10px; font-weight: 600; font-size: 14px; color: var(--dim); margin-bottom: 24px; }
+  .status .dot { width: 9px; height: 9px; border-radius: 50%; background: #6FD08C; box-shadow: 0 0 0 4px rgba(111, 208, 140, .18); }
+  .status.closed .dot { background: var(--faint); box-shadow: 0 0 0 4px rgba(244, 238, 227, .08); }
+  #status-now + span::before { content: '·'; margin-inline-end: 10px; color: var(--faint); }
+  .hero h1 .serif { color: var(--accent); }
+  .hero .lede { margin-top: 24px; }
+  .cta-row { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+  .gchip { display: inline-flex; align-items: center; gap: 12px; margin-top: 24px; font-size: 15px; color: var(--dim); }
+  .gchip b { font: 800 22px/1 'Bricolage Grotesque', sans-serif; color: var(--ink); letter-spacing: -.02em; }
+  .gchip u { text-decoration: none; border-bottom: 1px solid var(--line); transition: color .2s, border-color .2s; }
+  .gchip:hover u { color: var(--ink); border-color: var(--ink); }
+  .stars { display: inline-flex; gap: 2px; direction: ltr; }
+  .stars svg { width: 16px; height: 16px; }
+
+  /* The line-up: cut-out pets standing on the moving yellow floor */
+  .lineup { position: relative; z-index: 2; align-self: end; width: min(100% - 2 * var(--gutter), 520px); margin: 26px auto 0; height: clamp(230px, 36vh, 360px); }
+  .pet { position: absolute; bottom: var(--b, 0px); inset-inline-start: var(--x); height: var(--h); z-index: var(--z, 1); transform: translateY(var(--py, 0px)); will-change: transform; }
+  .pet img { height: 100%; width: auto; max-width: none; filter: drop-shadow(0 18px 18px rgba(0, 0, 0, .45)); animation: hop 1s var(--spring) var(--d, 0s) backwards; transition: transform .45s var(--spring); transform-origin: 50% 100%; }
+  .pet::after { content: ''; position: absolute; z-index: -1; inset-inline: 10%; bottom: -12px; height: 24px; border-radius: 50%; background: radial-gradient(closest-side, rgba(28, 20, 4, .5), transparent); }
+  .pet:hover img { transform: translateY(-14px) rotate(-2deg); }
+  @keyframes hop { from { transform: translateY(70%) scale(.86); opacity: 0; } 60% { opacity: 1; } to { transform: none; opacity: 1; } }
+  .floor { position: relative; z-index: 1; height: var(--floor); background: var(--accent); color: var(--accent-ink); display: flex; align-items: center; overflow: hidden; direction: ltr; }
+  .floor::before { content: ''; position: absolute; inset: 0 0 auto; height: 10px; background: linear-gradient(rgba(28, 20, 4, .16), transparent); }
+  .track { display: flex; flex: none; animation: slide 40s linear infinite; }
+  .track span { font: 800 clamp(22px, 3vw, 38px)/1 var(--display); letter-spacing: -.03em; white-space: nowrap; padding-inline: 22px; display: inline-flex; align-items: center; gap: 44px; }
+  .track span::after { content: ''; width: 12px; height: 12px; border-radius: 50%; background: var(--accent-ink); }
+  html[lang="ar"] .track span { letter-spacing: 0; }
+  @keyframes slide { to { transform: translateX(-50%); } }
+
+  @media (max-width: 999px) {
+    .hero-copy { padding-top: 96px; }
+    .status { margin-bottom: 18px; }
+    .hero .lede { margin-top: 18px; font-size: 16px; }
+    .cta-row { margin-top: 22px; }
+    .gchip { margin-top: 18px; }
+  }
+  @media (min-width: 1000px) {
+    .hero { grid-template-rows: 1fr auto; }
+    .hero-copy { padding-bottom: calc(var(--floor) + 40px); align-self: center; }
+    .hero h1 { max-width: 6.6em; }
+    html[lang="ar"] .hero h1 { max-width: 7em; }
+    .hero .lede { max-width: 33ch; }
+    .lineup { position: absolute; inset-inline-end: max(var(--gutter), calc((100% - var(--max)) / 2)); bottom: var(--floor); width: min(44vw, 640px); height: min(64vh, 600px); margin: 0; }
+  }
+
+  /* ── Proof strip ── */
+  .proof { display: grid; grid-template-columns: repeat(4, 1fr); border-bottom: 1px solid var(--line); }
+  .proof > div { padding-block: 34px; padding-inline: 0 clamp(16px, 2.4vw, 34px); border-inline-end: 1px solid var(--line); }
+  .proof > div + div { padding-inline-start: clamp(16px, 2.4vw, 34px); }
+  .proof > div:last-child { border-inline-end: 0; }
+  .proof b { display: block; font: 800 clamp(34px, 4.2vw, 58px)/1 var(--display); letter-spacing: var(--track); }
+  .proof b small { font-size: .5em; color: var(--accent); margin-inline-start: 4px; letter-spacing: 0; }
+  .proof span { display: block; margin-top: 10px; color: var(--dim); font-size: 15px; line-height: 1.45; max-width: 24ch; }
+  @media (max-width: 860px) {
+    .proof { grid-template-columns: 1fr 1fr; }
+    .proof > div { padding-block: 26px; }
+    .proof > div:nth-child(2) { border-inline-end: 0; }
+    .proof > div:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
+    .proof > div:nth-child(3) { padding-inline-start: 0; }
+  }
+
+  /* ── Sections ── */
+  section { position: relative; }
+  .sec { padding-block: clamp(84px, 12vw, 160px); }
+  .sec-head { display: grid; gap: 22px; margin-bottom: clamp(44px, 6vw, 80px); }
+  .sec-head .lede { max-width: 46ch; }
+  @media (min-width: 900px) { .sec-head.split { grid-template-columns: 1.2fr 1fr; align-items: end; } }
+
+  /* ── Services: each pet pops out of the top of its card ── */
+  .menu { display: grid; grid-template-columns: repeat(3, 1fr); gap: 84px 22px; padding-top: 64px; }
+  @media (max-width: 1000px) { .menu { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 640px) { .menu { grid-template-columns: 1fr; gap: 86px; } }
+  .svc { position: relative; display: flex; flex-direction: column; background: var(--bg-2); border-radius: var(--r); box-shadow: inset 0 0 0 1px var(--line); transition: transform .35s var(--ease), box-shadow .35s; }
+  .svc:hover { transform: translateY(-4px); box-shadow: inset 0 0 0 1px rgba(255, 197, 61, .45); }
+  .svc-stage { position: relative; height: 210px; margin: 14px 14px 0; }
+  .svc-stage::before { content: ''; position: absolute; inset: 0; border-radius: 120px 120px 18px 18px; background: radial-gradient(90% 80% at 50% 100%, #FFD36B, var(--accent) 60%, var(--accent-deep)); }
+  .svc-stage img { position: absolute; bottom: 0; left: 50%; height: 130%; width: auto; max-width: 108%; object-fit: contain; object-position: bottom; transform: translateX(-50%); transform-origin: 50% 100%; transition: transform .5s var(--spring); filter: drop-shadow(0 14px 16px rgba(28, 20, 4, .35)); }
+  .svc:hover .svc-stage img { transform: translateX(-50%) translateY(-8px) scale(1.04); }
+  .svc-body { display: flex; flex-direction: column; gap: 10px; padding: 24px; flex: 1; }
+  .svc .no { font: 700 13px/1 var(--body); color: var(--faint); letter-spacing: .1em; }
+  .svc h3 { font: 700 clamp(24px, 2.2vw, 29px)/1.08 var(--display); letter-spacing: -.03em; }
+  html[lang="ar"] .svc h3 { letter-spacing: 0; line-height: 1.35; }
+  .svc p { color: var(--dim); font-size: 16px; }
+  .svc-meta { display: flex; align-items: flex-end; justify-content: space-between; gap: 12px; margin-top: auto; padding-top: 14px; border-top: 1px solid var(--line); }
+  .svc .time { display: inline-flex; align-items: center; gap: 7px; font-size: 14px; color: var(--dim); }
+  .svc .time svg { width: 16px; height: 16px; stroke: currentColor; fill: none; stroke-width: 2; }
+  .svc .price { font: 800 30px/1 var(--display); letter-spacing: -.03em; color: var(--accent); white-space: nowrap; text-align: end; }
+  .svc .price small { display: block; font: 500 12px/1 var(--body); color: var(--faint); letter-spacing: .08em; text-transform: uppercase; margin-bottom: 6px; }
+  html[lang="ar"] .svc .price { letter-spacing: 0; font-size: 26px; }
+  html[lang="ar"] .svc .price small { letter-spacing: 0; font-size: 13px; }
+  .svc-book { margin-top: 12px; min-height: 48px; border-radius: 14px; font-weight: 700; font-size: 15px; background: rgba(244, 238, 227, .06); box-shadow: inset 0 0 0 1px var(--line); transition: background .2s, color .2s, box-shadow .2s; display: flex; align-items: center; justify-content: center; gap: 8px; }
+  .svc-book svg { width: 18px; height: 18px; stroke: currentColor; stroke-width: 2.2; fill: none; }
+  .svc-book:hover { background: var(--accent); color: var(--accent-ink); box-shadow: none; }
+  .menu-note { margin-top: 40px; color: var(--faint); font-size: 15px; }
+
+  /* ── Booking ── */
+  .booking { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.25fr); border-radius: 34px; overflow: hidden; background: var(--bg-2); box-shadow: inset 0 0 0 1px var(--line); min-height: 660px; }
+  @media (max-width: 900px) { .booking { grid-template-columns: 1fr; min-height: 0; } }
+  .b-side { position: relative; background: var(--accent); color: var(--accent-ink); padding: clamp(28px, 4vw, 48px); display: flex; flex-direction: column; gap: 18px; overflow: hidden; isolation: isolate; }
+  .b-side h3 { font: 800 clamp(36px, 4.4vw, 60px)/.92 var(--display); letter-spacing: var(--track); }
+  html[lang="ar"] .b-side h3 { line-height: 1.25; }
+  .b-side > p { font-size: 17px; max-width: 30ch; color: rgba(28, 20, 4, .78); }
+  .summary { list-style: none; margin-top: auto; border-top: 1.5px solid rgba(28, 20, 4, .16); max-width: 420px; }
+  .summary li { display: grid; grid-template-columns: 80px 1fr; gap: 12px; padding: 13px 0; border-bottom: 1.5px solid rgba(28, 20, 4, .16); font-size: 15px; }
+  .summary li span { color: rgba(28, 20, 4, .6); font-weight: 500; }
+  .summary li b { font-weight: 700; }
+  .summary li b:empty::before { content: '—'; color: rgba(28, 20, 4, .35); font-weight: 500; }
+  .booking-wrap { position: relative; margin-top: clamp(120px, 14vw, 190px); }
+  .booking-wrap .booking { position: relative; z-index: 1; }
+  .b-peek { position: absolute; z-index: 0; bottom: calc(100% - 64px); inset-inline-end: clamp(28px, 8%, 120px); height: clamp(170px, 17vw, 250px); width: auto; filter: drop-shadow(0 -6px 24px rgba(0, 0, 0, .35)); transition: transform .5s var(--spring); transform-origin: 50% 100%; }
+  html[dir="rtl"] .b-peek { transform: scaleX(-1); }
+  .booking-wrap:hover .b-peek { transform: translateY(-10px) rotate(2deg); }
+  html[dir="rtl"] .booking-wrap:hover .b-peek { transform: scaleX(-1) translateY(-10px) rotate(2deg); }
+
+  .b-main { padding: clamp(24px, 4vw, 48px); display: flex; flex-direction: column; min-width: 0; }
+  .progress { display: grid; grid-template-columns: repeat(6, 1fr); gap: 6px; }
+  .progress i { height: 5px; border-radius: 3px; background: rgba(244, 238, 227, .1); transition: background .3s; }
+  .progress i.on { background: var(--accent); }
+  #wizard { display: flex; flex-direction: column; flex: 1; }
+  .step-no { margin-top: 22px; font-size: 14px; color: var(--faint); font-weight: 600; }
+  .step-title { font: 800 clamp(30px, 3.4vw, 44px)/1 var(--display); letter-spacing: -.035em; margin-top: 8px; outline: none; }
+  html[lang="ar"] .step-title { letter-spacing: 0; line-height: 1.3; }
+  .step-sub { color: var(--dim); margin-top: 8px; font-size: 16px; }
+  .step { display: none; margin-top: 26px; animation: stepIn .45s var(--ease); }
+  .step.on { display: block; }
+  @keyframes stepIn { from { opacity: 0; transform: translateX(18px); } to { opacity: 1; transform: none; } }
+  html[dir="rtl"] .step, html[dir="rtl"] .done { animation-name: stepInRtl; }
+  @keyframes stepInRtl { from { opacity: 0; transform: translateX(-18px); } to { opacity: 1; transform: none; } }
+
+  .opts { display: grid; gap: 12px; }
+  .opts.two { grid-template-columns: 1fr 1fr; }
+  .opts.three { grid-template-columns: repeat(3, 1fr); }
+  @media (max-width: 520px) { .opts.two { grid-template-columns: 1fr; } }
+  .opt { position: relative; cursor: pointer; display: block; }
+  .opt input { position: absolute; opacity: 0; pointer-events: none; }
+  .opt-body { display: flex; align-items: center; gap: 14px; min-height: 64px; padding: 14px 16px; border-radius: 18px; background: var(--bg-3); box-shadow: inset 0 0 0 1.5px var(--line); transition: box-shadow .2s, background .2s; }
+  .opt:hover .opt-body { box-shadow: inset 0 0 0 1.5px rgba(244, 238, 227, .35); }
+  .opt input:checked + .opt-body { box-shadow: inset 0 0 0 2px var(--accent); background: rgba(255, 197, 61, .08); }
+  .opt input:focus-visible + .opt-body { outline: 3px solid var(--accent); outline-offset: 3px; }
+  .opt input:disabled + .opt-body { opacity: .3; cursor: not-allowed; }
+  .opt-body .t { display: grid; gap: 3px; min-width: 0; }
+  .opt-body b { font-weight: 700; font-size: 17px; line-height: 1.25; }
+  .opt-body small { color: var(--dim); font-size: 14px; line-height: 1.35; }
+  .opt-body .end { margin-inline-start: auto; text-align: end; font: 800 18px/1 var(--display); color: var(--accent); white-space: nowrap; }
+  .opt-body .end small { display: block; font: 500 12px/1.3 var(--body); color: var(--faint); }
+  .opt .thumb { width: 56px; height: 56px; flex: none; border-radius: 14px; background: var(--accent); display: flex; align-items: flex-end; justify-content: center; overflow: hidden; }
+  .opt .thumb img { height: 108%; width: auto; max-width: none; }
+  .opt.big .opt-body { flex-direction: column; align-items: stretch; padding: 14px 14px 18px; gap: 14px; }
+  .opt.big .thumb { width: 100%; height: 150px; border-radius: 14px; }
+  .opt.big .thumb img { height: 120%; transition: transform .45s var(--spring); transform-origin: 50% 100%; }
+  .opt.big:hover .thumb img { transform: translateY(-6px); }
+  .opt.center .opt-body { justify-content: center; text-align: center; min-height: 58px; padding: 10px; }
+  .tick { position: absolute; top: 24px; inset-inline-end: 24px; width: 26px; height: 26px; border-radius: 50%; display: grid; place-items: center; opacity: 0; transform: scale(.6); transition: opacity .2s, transform .3s var(--spring); }
+  .tick svg { width: 15px; height: 15px; stroke: var(--accent); stroke-width: 3; fill: none; }
+  .opt input:checked + .opt-body .tick { opacity: 1; transform: none; background: var(--accent-ink); }
+  .group-label { display: block; font-weight: 600; font-size: 15px; margin: 22px 0 10px; }
+  .group-label:first-child { margin-top: 0; }
+  .field { display: grid; gap: 8px; margin-top: 18px; }
+  .field label { font-weight: 600; font-size: 15px; }
+  .field label small { color: var(--faint); font-weight: 500; }
+  .field input, .field textarea { width: 100%; min-height: 54px; padding: 14px 16px; border-radius: 16px; border: 0; background: var(--bg-3); box-shadow: inset 0 0 0 1.5px var(--line); font-size: 16px; transition: box-shadow .2s; }
+  .field textarea { min-height: 92px; resize: vertical; }
+  .field input:focus, .field textarea:focus { outline: none; box-shadow: inset 0 0 0 2px var(--accent); }
+  .field input::placeholder, .field textarea::placeholder { color: var(--faint); }
+  .field .err { color: #FF9B85; font-size: 14px; display: none; }
+  .field.bad .err { display: block; }
+  .field.bad input { box-shadow: inset 0 0 0 2px #FF9B85; }
+  .two-fields { display: grid; grid-template-columns: 1fr 1fr; gap: 0 12px; margin-top: 4px; }
+  @media (max-width: 520px) { .two-fields { grid-template-columns: 1fr; } }
+
+  .days { display: flex; gap: 10px; overflow-x: auto; padding: 4px 4px 14px; margin: -4px -4px 0; scroll-snap-type: x mandatory; scrollbar-width: thin; scrollbar-color: var(--line) transparent; }
+  .days .opt { flex: none; scroll-snap-align: start; }
+  .days .opt-body { flex-direction: column; justify-content: center; gap: 4px; width: 84px; min-height: 100px; padding: 10px 6px; text-align: center; }
+  .days .opt-body small { font-size: 13px; }
+  .days .opt-body b { font: 800 32px/1 var(--display); }
+  .slots { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+  @media (max-width: 520px) { .slots { grid-template-columns: repeat(3, 1fr); } }
+  .slots .opt-body { justify-content: center; min-height: 52px; padding: 8px; font-weight: 600; }
+  .slot-head { font-size: 14px; color: var(--faint); font-weight: 600; margin: 20px 0 10px; }
+  .slot-head:first-child { margin-top: 0; }
+
+  .b-nav { display: flex; align-items: center; gap: 12px; margin-top: auto; padding-top: 30px; }
+  .b-nav .back { min-height: 52px; padding: 0 18px; border-radius: 16px; color: var(--dim); font-weight: 600; }
+  .b-nav .back:hover { color: var(--ink); background: rgba(244, 238, 227, .06); }
+  .b-nav .btn { margin-inline-start: auto; }
+  .b-nav .btn svg { stroke: currentColor; stroke-width: 2.4; fill: none; }
+  .b-nav #send svg { fill: currentColor; stroke: none; }
+  .b-hint { min-height: 22px; color: #FFB59F; font-size: 14px; margin-top: 10px; text-align: end; }
+  .done { display: none; text-align: center; padding: 40px 0 10px; margin-block: auto; outline: none; }
+  .done.on { display: block; animation: stepIn .45s var(--ease); }
+  .done .big { width: 76px; height: 76px; margin: 0 auto 22px; border-radius: 24px; background: #25D366; display: grid; place-items: center; }
+  .done .big svg { width: 40px; height: 40px; fill: #fff; }
+  .done h4 { font: 800 clamp(30px, 3.4vw, 40px)/1.05 var(--display); letter-spacing: -.03em; }
+  html[lang="ar"] .done h4 { letter-spacing: 0; line-height: 1.3; }
+  .done p { color: var(--dim); margin: 12px auto 0; max-width: 38ch; }
+  .done .row { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 26px; }
+
+  .how { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 34px; }
+  @media (max-width: 760px) { .how { grid-template-columns: 1fr; } }
+  .how div { display: flex; gap: 16px; align-items: flex-start; }
+  .how b { flex: none; width: 40px; height: 40px; border-radius: 12px; display: grid; place-items: center; background: rgba(255, 197, 61, .12); color: var(--accent); font: 800 17px/1 'Bricolage Grotesque', sans-serif; }
+  .how p { color: var(--dim); font-size: 15px; }
+  .how p strong { color: var(--ink); display: block; font-size: 16px; }
+
+  /* ── Photos with a yellow block behind them ── */
+  .framed { position: relative; border-radius: var(--r); }
+  .framed::before { content: ''; position: absolute; inset: 0; border-radius: inherit; background: var(--accent); transform: translate(16px, 16px); transition: transform .45s var(--spring); }
+  html[dir="rtl"] .framed::before { transform: translate(-16px, 16px); }
+  .framed img { position: relative; width: 100%; height: 100%; object-fit: cover; border-radius: inherit; transition: transform .45s var(--spring); }
+  .framed:hover img { transform: translate(-4px, -4px); }
+
+  /* ── Home visits ── */
+  .van { display: grid; grid-template-columns: 1.05fr 1fr; gap: clamp(48px, 7vw, 110px); align-items: center; }
+  @media (max-width: 900px) { .van { grid-template-columns: 1fr; } }
+  .van .framed { aspect-ratio: 4 / 3.3; margin-inline-end: 16px; }
+  .van ul { list-style: none; display: grid; gap: 12px; margin: 28px 0 34px; }
+  .van li { display: flex; gap: 12px; align-items: center; font-weight: 500; }
+  .van li svg, .checks li svg { width: 22px; height: 22px; flex: none; stroke: var(--accent); stroke-width: 2.4; fill: none; }
+  .mini-quote { margin-top: 32px; padding-inline-start: 18px; border-inline-start: 3px solid var(--accent); color: var(--dim); font-size: 16px; }
+  .mini-quote cite { display: block; margin-top: 6px; font-style: normal; font-size: 14px; color: var(--faint); }
+
+  /* ── Reviews ── */
+  .rating { display: flex; align-items: flex-end; gap: clamp(18px, 3vw, 36px); flex-wrap: wrap; }
+  .rating .num { font: 800 clamp(110px, 17vw, 240px)/.78 'Bricolage Grotesque', sans-serif; letter-spacing: -.06em; color: var(--accent); }
+  .rating .of { display: grid; gap: 10px; padding-bottom: 10px; }
+  .rating .of .stars svg { width: 28px; height: 28px; }
+  .rating .of span { color: var(--dim); font-size: 17px; }
+  .pull { margin-top: clamp(56px, 8vw, 110px); font: italic 600 clamp(34px, 5.4vw, 80px)/1.05 'Fraunces', Georgia, serif; letter-spacing: -.03em; font-variation-settings: 'SOFT' 100; max-width: 17ch; text-align: left; }
+  .pull::before { content: '“'; color: var(--accent); }
+  .pull::after { content: '”'; color: var(--accent); }
+  .pull-by { margin-top: 18px; color: var(--dim); }
+  .pull-by b { color: var(--ink); }
+  .rev-bar { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-top: clamp(56px, 7vw, 90px); margin-bottom: 22px; }
+  .rev-btns { display: flex; gap: 10px; }
+  .rev-btns button { width: 48px; height: 48px; border-radius: 14px; box-shadow: inset 0 0 0 1.5px var(--line); display: grid; place-items: center; transition: background .2s, box-shadow .2s, color .2s; }
+  .rev-btns button:hover { background: var(--accent); box-shadow: none; color: var(--accent-ink); }
+  .rev-btns svg { width: 20px; height: 20px; stroke: currentColor; stroke-width: 2.2; fill: none; }
+  .rev-btns .prev svg { transform: scaleX(-1); }
+  html[dir="rtl"] .rev-btns .prev svg { transform: none; }
+  html[dir="rtl"] .rev-btns .next svg { transform: scaleX(-1); }
+  .reviews { display: grid; grid-auto-flow: column; grid-auto-columns: min(370px, 82vw); gap: 18px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 4px max(var(--gutter), calc((100% - var(--max)) / 2)) 18px; scroll-padding-inline: max(var(--gutter), calc((100% - var(--max)) / 2)); scrollbar-width: none; overscroll-behavior-x: contain; }
+  .reviews::-webkit-scrollbar { display: none; }
+  .rev { scroll-snap-align: start; display: flex; flex-direction: column; gap: 16px; padding: 26px; border-radius: 24px; background: var(--bg-2); box-shadow: inset 0 0 0 1px var(--line); }
+  .rev q { quotes: none; font-size: 17px; line-height: 1.55; direction: ltr; text-align: left; unicode-bidi: isolate; }
+  .rev footer { display: flex; align-items: center; gap: 12px; margin-top: auto; padding-top: 16px; border-top: 1px solid var(--line); }
+  .rev .av { width: 40px; height: 40px; border-radius: 50%; display: grid; place-items: center; font: 800 16px/1 'Bricolage Grotesque', sans-serif; background: rgba(255, 197, 61, .14); color: var(--accent); flex: none; }
+  .rev footer b { display: block; font-size: 15px; direction: ltr; unicode-bidi: isolate; }
+  .rev footer small { color: var(--faint); font-size: 13px; }
+  .rev .gmark { margin-inline-start: auto; width: 20px; height: 20px; }
+  .rev-note { color: var(--faint); font-size: 14px; margin-top: 10px; }
+
+  /* ── Cats ── */
+  .cats { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(48px, 7vw, 110px); align-items: center; }
+  @media (max-width: 900px) { .cats { grid-template-columns: 1fr; } .cat-stage { order: -1; } }
+  .cat-stage { position: relative; height: clamp(320px, 38vw, 520px); }
+  .cat-stage::before { content: ''; position: absolute; inset: 10% 6% 0; border-radius: 999px 999px 28px 28px; background: radial-gradient(90% 70% at 50% 100%, #FFD36B, var(--accent) 60%, var(--accent-deep)); }
+  .cat-stage img { position: absolute; bottom: 0; width: auto; max-width: none; filter: drop-shadow(0 18px 20px rgba(28, 20, 4, .35)); transition: transform .5s var(--spring); transform-origin: 50% 100%; }
+  .cat-stage .a { left: 0; height: 84%; }
+  .cat-stage .b { right: 4%; height: 100%; }
+  .cat-stage img:hover { transform: translateY(-10px); }
+  .checks { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 12px 20px; margin: 28px 0 32px; }
+  .checks li { display: flex; gap: 10px; align-items: center; font-weight: 500; }
+
+  /* ── Gallery ── */
+  .gallery { display: grid; grid-auto-flow: column; grid-auto-columns: clamp(220px, 24vw, 330px); gap: 40px; overflow-x: auto; padding: 16px max(var(--gutter), calc((100% - var(--max)) / 2)) 44px; scroll-snap-type: x proximity; scrollbar-width: none; }
+  .gallery::-webkit-scrollbar { display: none; }
+  .gallery .framed { aspect-ratio: 3 / 4; scroll-snap-align: center; transform: rotate(var(--rot, 0deg)); transition: transform .45s var(--spring); }
+  .gallery .framed:hover { transform: rotate(0deg); }
+  .gallery .framed::before { transform: translate(12px, 12px); }
+  html[dir="rtl"] .gallery .framed::before { transform: translate(-12px, 12px); }
+
+  /* ── FAQ ── */
+  .faq-grid { display: grid; grid-template-columns: 1fr 1.4fr; gap: clamp(40px, 6vw, 90px); }
+  @media (max-width: 900px) { .faq-grid { grid-template-columns: 1fr; } }
+  details { border-bottom: 1px solid var(--line); }
+  details:first-child { border-top: 1px solid var(--line); }
+  summary { list-style: none; cursor: pointer; display: flex; align-items: center; justify-content: space-between; gap: 18px; padding: 24px 0; font: 700 clamp(19px, 1.7vw, 23px)/1.3 var(--display); letter-spacing: -.02em; }
+  html[lang="ar"] summary { letter-spacing: 0; }
+  summary::-webkit-details-marker { display: none; }
+  summary::after { content: ''; flex: none; width: 34px; height: 34px; border-radius: 10px; background: rgba(244, 238, 227, .07) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23FFC53D' stroke-width='2.6' stroke-linecap='round'%3E%3Cpath d='M12 5v14M5 12h14'/%3E%3C/svg%3E") center / 16px no-repeat; transition: transform .3s var(--ease); }
+  details[open] summary::after { transform: rotate(45deg); }
+  details p { color: var(--dim); padding: 0 0 24px; max-width: 58ch; }
+
+  /* ── Visit ── */
+  .visit { display: grid; grid-template-columns: 1.3fr 1fr; gap: 22px; }
+  @media (max-width: 900px) { .visit { grid-template-columns: 1fr; } }
+  .map { position: relative; min-height: 420px; border-radius: var(--r); overflow: hidden; background: var(--bg-2); box-shadow: inset 0 0 0 1px var(--line); }
+  .map iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; filter: grayscale(1) invert(.9) contrast(.85) brightness(.95); }
+  .map .btn { position: absolute; inset-inline-start: 16px; bottom: 16px; }
+  .info { display: grid; gap: 24px; padding: clamp(26px, 3.4vw, 40px); border-radius: var(--r); background: var(--bg-2); box-shadow: inset 0 0 0 1px var(--line); align-content: start; }
+  .info h4 { font: 600 13px/1.3 var(--body); letter-spacing: .14em; text-transform: uppercase; color: var(--faint); margin-bottom: 8px; }
+  html[lang="ar"] .info h4 { letter-spacing: 0; font-size: 14px; }
+  .info p { font-size: 18px; line-height: 1.5; }
+  .info .tel { font: 800 30px/1 'Bricolage Grotesque', sans-serif; letter-spacing: -.02em; direction: ltr; unicode-bidi: isolate; display: inline-block; transition: color .2s; }
+  .info .tel:hover { color: var(--accent); }
+  .info .row { display: flex; flex-wrap: wrap; gap: 10px; }
+
+  /* ── The end: giant name with pets peeking over it ── */
+  .end { position: relative; padding-block: clamp(110px, 14vw, 200px) clamp(40px, 8vw, 130px); overflow: hidden; text-align: center; }
+  .end h2 { margin-bottom: 30px; }
+  .end .cta-row { justify-content: center; }
+  .giant-wrap { position: relative; margin-top: clamp(110px, 14vw, 210px); direction: ltr; }
+  .giant { font: 800 clamp(58px, 15.2vw, 260px)/.8 'Bricolage Grotesque', sans-serif; letter-spacing: -.065em; white-space: nowrap; position: relative; z-index: 2; color: var(--ink); }
+  .giant i { font-style: normal; color: var(--accent); }
+  .giant.mirror { position: absolute; inset: 100% 0 auto; z-index: 1; transform: scaleY(-1); opacity: .14; -webkit-mask-image: linear-gradient(to top, #000, transparent 50%); mask-image: linear-gradient(to top, #000, transparent 50%); pointer-events: none; }
+  .peek { position: absolute; z-index: 1; bottom: 62%; width: auto; transition: transform .5s var(--spring); transform-origin: 50% 100%; }
+  .peek:hover { transform: translateY(-14px); }
+  .peek.p1 { left: 13%; height: clamp(96px, 14vw, 240px); }
+  .peek.p2 { left: 62%; height: clamp(80px, 11.5vw, 196px); }
+  .foot { position: relative; z-index: 3; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 14px 30px; padding-block: 34px 120px; color: var(--faint); font-size: 14px; border-top: 1px solid var(--line); }
+  .foot a:hover { color: var(--ink); }
+
+  /* ── Sticky book bar (phones) ── */
+  .dock { position: fixed; z-index: 40; inset-inline: 12px; bottom: calc(12px + env(safe-area-inset-bottom)); display: none; align-items: center; gap: 12px; padding-block: 10px; padding-inline: 18px 10px; border-radius: 20px; background: rgba(24, 22, 19, .9); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); box-shadow: inset 0 0 0 1px var(--line), 0 18px 40px -12px rgba(0, 0, 0, .7); transform: translateY(150%); transition: transform .45s var(--ease); }
+  .dock.show { transform: none; }
+  .dock p { font-size: 14px; line-height: 1.3; color: var(--dim); }
+  .dock p b { display: block; color: var(--ink); font-size: 15px; }
+  .dock .btn { margin-inline-start: auto; min-height: 48px; }
+  @media (max-width: 760px) { .dock { display: flex; } }
 
   @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
-    .rv, .msg { opacity: 1; transform: none; }
-    .hero-img { transform: none; }
+    .rv { opacity: 1; transform: none; }
   }
 </style>
 </head>
 <body>
 
+<!-- Icons used more than once -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2" stroke-linecap="round"/></symbol>
+  <symbol id="check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="g" viewBox="0 0 24 24"><path fill="#4285F4" d="M23.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.5a5.6 5.6 0 0 1-2.4 3.6v3h3.9c2.2-2.1 3.5-5.1 3.5-8.8z"/><path fill="#34A853" d="M12 24c3.2 0 6-1.1 7.9-2.9l-3.9-3c-1.1.7-2.4 1.2-4 1.2-3.1 0-5.7-2.1-6.6-4.9H1.4v3.1A12 12 0 0 0 12 24z"/><path fill="#FBBC05" d="M5.4 14.4a7.2 7.2 0 0 1 0-4.7V6.6H1.4a12 12 0 0 0 0 10.9z"/><path fill="#EA4335" d="M12 4.8c1.7 0 3.3.6 4.5 1.8l3.4-3.4A12 12 0 0 0 1.4 6.6l4 3.1C6.3 6.9 8.9 4.8 12 4.8z"/></symbol>
+</svg>
+
+<nav class="nav" id="nav" aria-label="Main">
+  <a class="logo" href="#top" aria-label="Furry Friends, back to top">Furry Friends<i>.</i></a>
+  <a class="navlink" href="#services" data-ar="الخدمات">Services</a>
+  <a class="navlink" href="#reviews" data-ar="التقييمات">Reviews</a>
+  <a class="navlink" href="#visit" data-ar="موقعنا">Visit</a>
+  <button class="lang" id="lang" type="button" aria-label="اقرأ الصفحة بالعربي">عربي</button>
+  <a class="btn" href="#book" data-ar="احجز">Book</a>
+</nav>
+
 <header class="hero" id="top">
-  <div class="hero-img" data-img="K" role="img" aria-label="A freshly groomed fluffy white dog running across the grass"></div>
-  <div class="top">
-    <a class="logo brand" href="#top" aria-label="Furry Friends home">Furry Friends<span>.</span></a>
-    <nav aria-label="Main">
-      <a class="navlink" href="#prices" data-ar="الأسعار">Prices</a>
-      <a class="navlink" href="#home-visits" data-ar="زيارات منزلية">Home visits</a>
-      <a class="navlink" href="#visit" data-ar="موقعنا">Visit</a>
-      <button class="lang" id="lang" type="button" aria-label="عربي / English"><span lang="ar">عربي</span></button>
-      <a class="btn" data-wa href="#"><span data-ar="احجز">Book</span></a>
-    </nav>
-  </div>
-  <div class="hero-copy">
-    <p class="kicker rv" data-ar="تجميل الحيوانات الأليفة · قرية جميرا الدائرية">Pet grooming · Jumeirah Village Circle</p>
-    <h1 class="mega rv" style="--d:.08s" data-ar='دلّع <span class="accent">صاحبك</span> الفروي.'>Fresh cuts for <span class="accent">furry</span> friends.</h1>
-    <div class="hero-row">
-      <div class="rv" style="--d:.18s">
-        <p class="lede" data-ar="كلاب وقطط وطيور وحيوانات صغيرة. نعتني فيها في محلنا في JVC أو عند باب بيتك، واحجز برسالة واتساب وحدة.">Dogs, cats, birds and small pets. Groomed in our JVC shop or at your door — book in one WhatsApp message.</p>
-        <div class="hero-actions">
-          <a class="btn" data-wa href="#">__WA_ICON__ <span data-ar="احجز على واتساب">Book on WhatsApp</span></a>
-          <a class="textlink" href="#prices" data-ar="شوف الأسعار ↓">See prices ↓</a>
-        </div>
-      </div>
-      <div class="facts rv" style="--d:.28s">
-        <span class="status" id="status"><i></i><b data-open-text>Open every day</b></span>
-        <span data-ar="مفتوح كل يوم <b>9 ص – 6 م</b>">Open every day <b>9 AM – 6 PM</b></span>
-        <span data-ar="محل 3، صبحا دافوديل، JVC">Shop 3, Sobha Daffodil, JVC</span>
-      </div>
+  <div class="grain"></div>
+  <div class="hero-copy wrap">
+    <p class="status" id="status"><span class="dot" aria-hidden="true"></span><span id="status-now"></span><span data-ar="جميرا فيلج سيركل، دبي">JVC, Dubai</span></p>
+    <h1 class="mega" data-ar='دلّع <span class="serif">صاحبك</span> الفروي.'>Fresh cuts for <span class="serif">furry</span> friends.</h1>
+    <p class="lede" data-ar="كلاب وقطط وحيوانات صغيرة، نعتني فيها في محلنا في JVC أو نجيك بسيارة التجميل لين باب بيتك. اختار الموعد واحجز على واتساب بأقل من دقيقة.">Dogs, cats and small pets — groomed in our JVC shop or at your door by our grooming van. Pick a time and book on WhatsApp in under a minute.</p>
+    <div class="cta-row">
+      <a class="btn" href="#book">__WA_ICON__ <span data-ar="احجز موعد">Book a groom</span></a>
+      <a class="btn ghost" href="#services" data-ar="شوف الأسعار">See prices</a>
     </div>
+    <a class="gchip" href="https://www.google.com/maps/place/Furry+Friends+JVC/@25.0470909,55.2061364,17z/data=!4m8!3m7!1s0x3e5f6dc907abf60d:0xa665965d3df1e7f7!8m2!3d25.0470909!4d55.2061364!9m1!1b1!16s%2Fg%2F11b6345433" target="_blank" rel="noopener">
+      <b>4.3</b>
+      <span class="stars" aria-hidden="true" data-stars="4.3"></span>
+      <u data-ar="340 تقييم على Google">340 Google reviews</u>
+    </a>
   </div>
+  <div class="lineup" id="lineup" aria-hidden="true">
+    <span class="pet" style="--x:0%;--h:74%;--b:20px;--z:1;--p:.05"><img src="photos/c_poodle.webp" alt="" style="--d:.35s"></span>
+    <span class="pet" style="--x:24%;--h:100%;--b:30px;--z:1;--p:.1"><img src="photos/c_golden.webp" alt="" style="--d:.2s" fetchpriority="high"></span>
+    <span class="pet" style="--x:55%;--h:66%;--b:22px;--z:2;--p:.07"><img src="photos/c_kitten.webp" alt="" style="--d:.5s"></span>
+    <span class="pet" style="--x:12%;--h:52%;--b:-6px;--z:3;--p:.02"><img src="photos/c_bichon2.webp" alt="" style="--d:.65s"></span>
+    <span class="pet" style="--x:66%;--h:50%;--b:-8px;--z:3;--p:.03"><img src="photos/c_shihtzu.webp" alt="" style="--d:.8s"></span>
+  </div>
+  <div class="floor" aria-hidden="true"><div class="track" id="track"></div></div>
 </header>
 
-<div class="marquee" aria-hidden="true">
-  <div class="marquee-track" data-ar='<span>قص الشعر<i>/</i></span><span>استحمام<i>/</i></span><span>تجفيف<i>/</i></span><span>العناية بالأظافر<i>/</i></span><span>الأذن والعيون<i>/</i></span><span>تنظيف الأسنان<i>/</i></span><span>عند باب بيتك<i>/</i></span><span>قص الشعر<i>/</i></span><span>استحمام<i>/</i></span><span>تجفيف<i>/</i></span><span>العناية بالأظافر<i>/</i></span><span>الأذن والعيون<i>/</i></span><span>تنظيف الأسنان<i>/</i></span><span>عند باب بيتك<i>/</i></span>'>
-    <span>Haircuts<i>/</i></span><span>Baths<i>/</i></span><span>Blow dries<i>/</i></span><span>Nail care<i>/</i></span><span>Ears &amp; eyes<i>/</i></span><span>Teeth cleaning<i>/</i></span><span>At your door<i>/</i></span>
-    <span>Haircuts<i>/</i></span><span>Baths<i>/</i></span><span>Blow dries<i>/</i></span><span>Nail care<i>/</i></span><span>Ears &amp; eyes<i>/</i></span><span>Teeth cleaning<i>/</i></span><span>At your door<i>/</i></span>
+<main>
+  <div class="wrap proof">
+    <div class="rv"><b>4.3<small>★</small></b><span data-ar="من 340 تقييم على Google.">From 340 reviews on Google.</span></div>
+    <div class="rv" style="--d:.06s"><b data-ar="مكانين">2 ways</b><span data-ar="في محلنا في JVC، أو سيارة التجميل عند بيتك.">In our JVC shop, or our grooming van at your door.</span></div>
+    <div class="rv" style="--d:.12s"><b data-ar="7 أيام">7 days</b><span data-ar="مفتوحين كل يوم من 9 ص إلى 6 م.">Open every day, 9 AM – 6 PM.</span></div>
+    <div class="rv" style="--d:.18s"><b data-ar="ثواني">Seconds</b><span data-ar="نرد على واتساب ونأكد موعدك، حتى بالليل.">To confirm your booking on WhatsApp, even at night.</span></div>
   </div>
-</div>
 
-<div class="numbers">
-  <div class="rv"><b>6<small data-ar="سنوات">yrs</small></b><span data-ar="نهتم بحيوانات دبي في قلب JVC.">Keeping Dubai's pets gorgeous, right in the heart of JVC.</span></div>
-  <div class="rv" style="--d:.08s"><b>4.7<small>★</small></b><span data-ar="من 46 تقييم على Fresha.">From 46 reviews on Fresha.</span></div>
-  <div class="rv" style="--d:.16s"><b>7<small data-ar="أيام">days</small></b><span data-ar="مفتوحين كل يوم من 9 ص إلى 6 م، والحجز على واتساب بأي وقت.">Open every day, 9 AM – 6 PM. WhatsApp bookings any time.</span></div>
-</div>
-
-<section id="book" aria-labelledby="book-title">
-  <div class="book">
-    <div>
-      <p class="kicker rv" data-ar="كيف تحجز">How booking works</p>
-      <h2 class="h2 rv" id="book-title" style="--d:.06s;margin-top:18px" data-ar='احجز برسالة <span class="accent">وحدة.</span>'>Book in one <span class="accent">message.</span></h2>
-      <ol class="steps">
-        <li class="rv"><span class="no">01</span><h3 data-ar="اضغط «احجز على واتساب»">Tap “Book on WhatsApp”</h3><p data-ar="من أي مكان في الصفحة، وتنفتح محادثة معنا.">Anywhere on this page. It opens a chat with us.</p></li>
-        <li class="rv" style="--d:.08s"><span class="no">02</span><h3 data-ar="قول لنا عن حيوانك والوقت">Tell us your pet and a time</h3><p data-ar="بالعربي أو بالإنجليزي، كأنك تراسل صديقك.">In English or Arabic, just like texting a friend.</p></li>
-        <li class="rv" style="--d:.16s"><span class="no">03</span><h3 data-ar="يتأكد موعدك">Get your slot confirmed</h3><p data-ar="خلال ثواني، حتى آخر الليل. ونرسل لك تذكير قبل الموعد.">In seconds — even late at night. We send a reminder before your visit.</p></li>
-      </ol>
+  <!-- Services -->
+  <section class="sec" id="services" aria-labelledby="services-title">
+    <div class="wrap">
+      <div class="sec-head split">
+        <div>
+          <p class="kicker rv" data-ar="قائمة الخدمات">The grooming menu</p>
+          <h2 class="h2 rv" id="services-title" style="--d:.06s;margin-top:18px" data-ar='اختار <span class="serif accent">الدلع.</span>'>Pick the <span class="serif accent">pampering.</span></h2>
+        </div>
+        <p class="lede rv" style="--d:.12s" data-ar="كل حيوان يختلف، فالأسعار تبدأ من المذكور وتعتمد على الحجم ونوع الفرو. نأكد لك السعر النهائي على واتساب قبل الموعد.">Every pet is different, so prices start from what you see here and depend on size and coat. We confirm your final price on WhatsApp before you come.</p>
+      </div>
+      <div class="menu" id="menu"></div>
+      <p class="menu-note rv" data-ar="الأسعار بالدرهم الإماراتي.">Prices in AED.</p>
     </div>
-    <div class="rv" style="--d:.1s">
-      <div class="phone" role="img" aria-label="A WhatsApp chat in which a customer books a full groom with Furry Friends">
-        <div class="screen">
-          <div class="wa-top"><div class="av" data-img="I"></div><div><b class="brand">Furry Friends</b><small data-ar="تجميل حيوانات · يرد خلال ثواني">Pet grooming · replies in seconds</small></div></div>
-          <div class="chat" id="chat">
-            <div class="msg them" data-step><span data-ar="هلا! كم سعر التشذيب الكامل لكلبي الشيتزو؟ 🐶">Hi! How much is a full groom for my shih tzu? 🐶</span><time data-ar="9:41 م">9:41 PM</time></div>
-            <div class="msg us" data-step><span data-ar="هلا وغلا! التشذيب الكامل مع القص يبدأ من 260 درهم وياخذ تقريباً ساعتين. بكرة عندنا 10:00 ص أو 2:30 م، أي وقت يناسبك؟">Hi! A full groom with haircut is from AED 260 and takes about 2 hours. Tomorrow we have 10:00 AM or 2:30 PM — which suits you?</span><time data-ar="9:41 م">9:41 PM</time></div>
-            <div class="msg them" data-step><span data-ar="2:30 لو سمحت">2:30 please</span><time data-ar="9:42 م">9:42 PM</time></div>
-            <div class="msg us" data-step><span data-ar="تم الحجز ✅ تشذيب كامل بكرة الساعة 2:30 م. نشوفك في محل 3، صبحا دافوديل!">Booked ✅ Full groom tomorrow at 2:30 PM. See you at Shop 3, Sobha Daffodil!</span><time data-ar="9:42 م">9:42 PM</time></div>
-            <div class="typing" id="typing" aria-hidden="true"><i></i><i></i><i></i></div>
+  </section>
+
+  <!-- Booking -->
+  <section class="sec" id="book" aria-labelledby="book-title" style="padding-top:0">
+    <div class="wrap">
+      <div class="booking-wrap rv">
+      <img class="b-peek" src="photos/c_wave.webp" alt="" loading="lazy">
+      <div class="booking">
+        <aside class="b-side">
+          <p class="kicker" style="color:rgba(28,20,4,.6)" data-ar="احجز أونلاين">Book online</p>
+          <h3 id="book-title" data-ar="احجز بأقل<br>من دقيقة.">Book in under<br>a minute.</h3>
+          <p data-ar="اختار كم شي، وتنفتح واتساب ورسالتك جاهزة. نرد ونأكد موعدك خلال ثواني.">Pick a few things and WhatsApp opens with your booking written for you. We reply and confirm in seconds.</p>
+          <ul class="summary" aria-live="polite">
+            <li><span data-ar="المكان">Where</span><b id="s-where"></b></li>
+            <li><span data-ar="الحيوان">Pet</span><b id="s-pet"></b></li>
+            <li><span data-ar="الخدمة">Service</span><b id="s-service"></b></li>
+            <li><span data-ar="الموعد">When</span><b id="s-when"></b></li>
+            <li><span data-ar="الاسم">Name</span><b id="s-name"></b></li>
+          </ul>
+        </aside>
+
+        <div class="b-main">
+          <div class="progress" id="progress" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          <form id="wizard" novalidate>
+            <div id="steps-wrap">
+              <p class="step-no" id="step-no"></p>
+              <h4 class="step-title" id="step-title" tabindex="-1"></h4>
+              <p class="step-sub" id="step-sub"></p>
+
+              <fieldset class="step" data-step="1">
+                <legend class="sr" data-ar="وين نعتني بحيوانك؟">Where should we groom?</legend>
+                <div class="opts two">
+                  <label class="opt big"><input type="radio" name="where" value="shop"><span class="opt-body"><span class="thumb"><img src="photos/c_bichon.webp" alt="" loading="lazy"></span><span class="t"><b data-ar="في محلنا">At our shop</b><small data-ar="محل 3، صبحا دافوديل، JVC">Shop 3, Sobha Daffodil, JVC</small></span><span class="tick"><svg><use href="#check"/></svg></span></span></label>
+                  <label class="opt big"><input type="radio" name="where" value="home"><span class="opt-body"><span class="thumb"><img src="photos/c_towel.webp" alt="" loading="lazy"></span><span class="t"><b data-ar="عند بيتك">At your home</b><small data-ar="سيارة التجميل تجيك لين الباب">Our grooming van comes to your door</small></span><span class="tick"><svg><use href="#check"/></svg></span></span></label>
+                </div>
+              </fieldset>
+
+              <fieldset class="step" data-step="2">
+                <legend class="sr" data-ar="مين جاي؟">Who’s coming?</legend>
+                <span class="group-label" data-ar="نوع الحيوان">Type of pet</span>
+                <div class="opts three">
+                  <label class="opt center"><input type="radio" name="kind" value="dog"><span class="opt-body"><b data-ar="كلب">Dog</b></span></label>
+                  <label class="opt center"><input type="radio" name="kind" value="cat"><span class="opt-body"><b data-ar="قطة">Cat</b></span></label>
+                  <label class="opt center"><input type="radio" name="kind" value="other"><span class="opt-body"><b data-ar="غيره">Other</b></span></label>
+                </div>
+                <div id="size-wrap" hidden>
+                  <span class="group-label" data-ar="الحجم">Size</span>
+                  <div class="opts three">
+                    <label class="opt center"><input type="radio" name="size" value="small"><span class="opt-body"><span class="t"><b data-ar="صغير">Small</b><small data-ar="أقل من 10 كيلو">under 10 kg</small></span></span></label>
+                    <label class="opt center"><input type="radio" name="size" value="medium"><span class="opt-body"><span class="t"><b data-ar="وسط">Medium</b><small data-ar="10 – 25 كيلو">10 – 25 kg</small></span></span></label>
+                    <label class="opt center"><input type="radio" name="size" value="large"><span class="opt-body"><span class="t"><b data-ar="كبير">Large</b><small data-ar="أكثر من 25 كيلو">over 25 kg</small></span></span></label>
+                  </div>
+                </div>
+                <div class="two-fields">
+                  <div class="field"><label for="pet-name"><span data-ar="اسم حيوانك">Pet’s name</span> <small data-ar="(اختياري)">(optional)</small></label><input id="pet-name" name="petName" autocomplete="off" maxlength="40" placeholder="Luna" data-ar-ph="لونا"></div>
+                  <div class="field"><label for="breed"><span data-ar="السلالة">Breed</span> <small data-ar="(اختياري)">(optional)</small></label><input id="breed" name="breed" autocomplete="off" maxlength="40" placeholder="Shih Tzu" data-ar-ph="شيتزو"></div>
+                </div>
+              </fieldset>
+
+              <fieldset class="step" data-step="3">
+                <legend class="sr" data-ar="أي خدمة؟">Which service?</legend>
+                <div class="opts" id="svc-opts"></div>
+              </fieldset>
+
+              <fieldset class="step" data-step="4">
+                <legend class="sr" data-ar="أي يوم؟">Which day?</legend>
+                <div class="days" id="days"></div>
+              </fieldset>
+
+              <fieldset class="step" data-step="5">
+                <legend class="sr" data-ar="أي وقت؟">What time?</legend>
+                <div id="slots"></div>
+              </fieldset>
+
+              <fieldset class="step" data-step="6">
+                <legend class="sr" data-ar="آخر شي">Last bit</legend>
+                <div class="field" id="f-name" style="margin-top:0"><label for="your-name" data-ar="اسمك">Your name</label><input id="your-name" name="name" autocomplete="name" maxlength="50" required><span class="err" data-ar="اكتب اسمك عشان نعرف مين نأكد له.">Add your name so we know who to confirm.</span></div>
+                <div class="field" id="f-address" hidden><label for="address" data-ar="وين بيتك؟">Where’s home?</label><input id="address" name="address" autocomplete="street-address" maxlength="120" placeholder="Area, building, flat or villa" data-ar-ph="المنطقة، البناية، الشقة أو الفيلا"><span class="err" data-ar="قول لنا وين نجيك.">Tell us where to come.</span></div>
+                <div class="field"><label for="notes"><span data-ar="شي لازم نعرفه؟">Anything we should know?</span> <small data-ar="(اختياري)">(optional)</small></label><textarea id="notes" name="notes" maxlength="400" placeholder="Nervous with dryers, matted fur, first groom…" data-ar-ph="يخاف من السشوار، فروه متلبّد، أول مرة…"></textarea></div>
+              </fieldset>
+            </div>
+
+            <div class="done" id="done" tabindex="-1">
+              <div class="big">__WA_ICON__</div>
+              <h4 data-ar="واتساب ينفتح الحين">WhatsApp is opening</h4>
+              <p data-ar="رسالتك جاهزة. اضغط إرسال في واتساب، ونأكد موعدك خلال ثواني.">Your booking is written for you. Press send in WhatsApp and we’ll confirm your time in seconds.</p>
+              <div class="row">
+                <a class="btn" id="send-again" href="#" target="_blank" rel="noopener">__WA_ICON__ <span data-ar="ما انفتح؟ اضغط هنا">Didn’t open? Tap here</span></a>
+                <button class="btn ghost" type="button" id="restart" data-ar="حجز ثاني">Book another</button>
+              </div>
+            </div>
+
+            <div class="b-nav" id="b-nav">
+              <button class="back" type="button" id="back"><span class="flip" style="display:inline-block">←</span> <span data-ar="رجوع">Back</span></button>
+              <button class="btn" type="button" id="next"><span data-ar="التالي">Next</span> <svg class="flip"><use href="#arrow"/></svg></button>
+              <a class="btn" id="send" href="#" target="_blank" rel="noopener" hidden>__WA_ICON__ <span data-ar="أرسل على واتساب">Send on WhatsApp</span></a>
+            </div>
+            <p class="b-hint" id="hint" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+      </div>
+
+      <div class="how">
+        <div class="rv"><b>1</b><p><strong data-ar="اختار">Choose</strong><span data-ar="المكان والخدمة والوقت اللي يناسبك.">Where, what and when suits you.</span></p></div>
+        <div class="rv" style="--d:.06s"><b>2</b><p><strong data-ar="أرسل على واتساب">Send on WhatsApp</strong><span data-ar="الرسالة تنكتب لك، بس اضغط إرسال.">Your message is written for you — just press send.</span></p></div>
+        <div class="rv" style="--d:.12s"><b>3</b><p><strong data-ar="يتأكد موعدك">Get confirmed</strong><span data-ar="نرد خلال ثواني، حتى بعد الدوام.">We reply in seconds — even after hours.</span></p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Home visits -->
+  <section class="sec" id="home-visits" aria-labelledby="van-title" style="padding-top:clamp(40px,6vw,80px)">
+    <div class="wrap van">
+      <div class="framed rv"><img src="photos/p_pomtowel.webp" alt="A fluffy dog wrapped in a pink towel being brushed" loading="lazy"></div>
+      <div>
+        <p class="kicker rv" data-ar="تجميل متنقل">Mobile grooming</p>
+        <h2 class="h2 rv" id="van-title" style="--d:.06s;margin-top:18px" data-ar='مشغول؟ <span class="serif accent">نجيك.</span>'>Busy? <span class="serif accent">We’ll come to you.</span></h2>
+        <p class="lede rv" style="--d:.12s;margin-top:24px" data-ar="سيارة التجميل توقف عند باب بيتك. بدون مشاوير ولا انتظار، وحيوانك يرتاح قريب من البيت.">Our grooming van parks at your door. No car rides, no waiting rooms — and your pet stays calm close to home.</p>
+        <ul class="rv" style="--d:.16s">
+          <li><svg><use href="#check"/></svg><span data-ar="تشذيب كامل، استحمام، وقص أظافر">Full grooms, baths and nail trims</span></li>
+          <li><svg><use href="#check"/></svg><span data-ar="نفس الفريق اللي تعرفه من المحل">The same team you know from the shop</span></li>
+          <li><svg><use href="#check"/></svg><span data-ar="قول لنا منطقتك ونأكد لك على واتساب">Tell us your area and we’ll confirm on WhatsApp</span></li>
+        </ul>
+        <button class="btn rv" style="--d:.2s" type="button" data-home>__WA_ICON__ <span data-ar="احجز زيارة منزلية">Book a home visit</span></button>
+        <blockquote class="mini-quote rv" style="--d:.24s"><span dir="ltr">“The convenience of their mobile grooming van is a game changer.”</span><cite data-ar="Ekra M. · تقييم على Google">Ekra M. · Google review</cite></blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="sec" id="reviews" aria-labelledby="reviews-title">
+    <div class="wrap">
+      <p class="kicker rv" data-ar="آراء العملاء على Google">What owners say on Google</p>
+      <h2 class="sr" id="reviews-title" data-ar="التقييمات">Reviews</h2>
+      <div class="rating rv" style="--d:.06s;margin-top:22px">
+        <span class="num">4.3</span>
+        <div class="of">
+          <span class="stars" role="img" aria-label="4.3 out of 5 stars" data-stars="4.3"></span>
+          <span data-ar="من 340 تقييم على Google">from 340 reviews on Google</span>
+        </div>
+      </div>
+      <p class="pull rv" dir="ltr">Where Carmen goes, my fur babies will follow.</p>
+      <p class="pull-by rv"><b>Elize S.</b> · <span data-ar="تقييم 5 نجوم على Google">5-star Google review</span></p>
+
+      <div class="rev-bar">
+        <a class="textlink" href="https://www.google.com/maps/place/Furry+Friends+JVC/@25.0470909,55.2061364,17z/data=!4m8!3m7!1s0x3e5f6dc907abf60d:0xa665965d3df1e7f7!8m2!3d25.0470909!4d55.2061364!9m1!1b1!16s%2Fg%2F11b6345433" target="_blank" rel="noopener" data-ar="اقرأ كل الـ340 تقييم على Google ←">Read all 340 on Google →</a>
+        <div class="rev-btns">
+          <button type="button" class="prev" id="rev-prev" aria-label="Previous reviews" data-ar-aria="التقييمات السابقة"><svg><use href="#arrow"/></svg></button>
+          <button type="button" class="next" id="rev-next" aria-label="More reviews" data-ar-aria="تقييمات أكثر"><svg><use href="#arrow"/></svg></button>
+        </div>
+      </div>
+    </div>
+    <div class="reviews" id="reviews-track" tabindex="0" aria-label="Google reviews"></div>
+    <div class="wrap"><p class="rev-note" data-ar="التقييمات منقولة من Google كما كتبها أصحابها، ومختصرة.">Shown as their owners wrote them on Google, shortened.</p></div>
+  </section>
+
+  <!-- Cats -->
+  <section class="sec" id="cats" aria-labelledby="cats-title" style="padding-top:clamp(40px,6vw,80px)">
+    <div class="wrap cats">
+      <div>
+        <p class="kicker rv" data-ar="مو بس كلاب">Not just dogs</p>
+        <h2 class="h2 rv" id="cats-title" style="--d:.06s;margin-top:18px" data-ar='القطط <span class="serif accent">تحبنا</span> بعد.'>Cats <span class="serif accent">love it</span> here too.</h2>
+        <p class="lede rv" style="--d:.12s;margin-top:24px" data-ar="أيادي هادية وبدون استعجال، حتى للقطط اللي تخاف. نعتني بالقطط الفارسية والطيور والحيوانات الصغيرة بعد.">Calm hands and no rush, even for anxious cats. We groom Persians, birds and small pets too.</p>
+        <ul class="checks rv" style="--d:.16s">
+          <li><svg><use href="#check"/></svg><span data-ar="قص واستحمام">Haircuts and baths</span></li>
+          <li><svg><use href="#check"/></svg><span data-ar="تقليم الأظافر">Nail clipping</span></li>
+          <li><svg><use href="#check"/></svg><span data-ar="العناية بالأذن والعيون">Ear and eye care</span></li>
+          <li><svg><use href="#check"/></svg><span data-ar="تنظيف الأسنان">Teeth cleaning</span></li>
+        </ul>
+        <button class="btn rv" style="--d:.2s" type="button" data-cat>__WA_ICON__ <span data-ar="احجز لقطتك">Book for your cat</span></button>
+        <blockquote class="mini-quote rv" style="--d:.24s"><span dir="ltr">“Furry friends do a great job of grooming my anxious cat who doesn't like being groomed at all.”</span><cite data-ar="Louise B. · تقييم على Google">Louise B. · Google review</cite></blockquote>
+      </div>
+      <div class="cat-stage rv" aria-hidden="true">
+        <img class="a" src="photos/c_persian.webp" alt="" loading="lazy">
+        <img class="b" src="photos/c_kitten.webp" alt="" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section aria-label="Photos" style="padding-bottom:clamp(60px,8vw,110px)">
+    <div class="gallery">
+      <div class="framed" style="--rot:-2.5deg"><img src="photos/p_scissors.webp" alt="A white dog getting a trim with scissors" loading="lazy"></div>
+      <div class="framed" style="--rot:2deg"><img src="photos/p_shake.webp" alt="A fluffy white dog shaking off water" loading="lazy"></div>
+      <div class="framed" style="--rot:-1.5deg"><img src="photos/p_pugbath.webp" alt="A pug in the bath" loading="lazy"></div>
+      <div class="framed" style="--rot:2.5deg"><img src="photos/p_blowdry.webp" alt="A long-haired dog being blow dried" loading="lazy"></div>
+      <div class="framed" style="--rot:-2deg"><img src="photos/p_shihtzu2.webp" alt="A happy shih tzu" loading="lazy"></div>
+      <div class="framed" style="--rot:1.5deg"><img src="photos/p_poodles.webp" alt="Two fluffy white poodles" loading="lazy"></div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="sec" id="faq" aria-labelledby="faq-title" style="padding-top:clamp(40px,6vw,80px)">
+    <div class="wrap faq-grid">
+      <div>
+        <p class="kicker rv" data-ar="أسئلة">Questions</p>
+        <h2 class="h2 rv" id="faq-title" style="--d:.06s;margin-top:18px" data-ar='حلو <span class="serif accent">تعرف.</span>'>Good to <span class="serif accent">know.</span></h2>
+      </div>
+      <div class="rv" style="--d:.1s">
+        <details><summary data-ar="أي حيوانات تعتنون فيها؟">What pets do you groom?</summary><p data-ar="الكلاب والقطط والطيور والحيوانات الصغيرة.">Dogs, cats, birds and small pets.</p></details>
+        <details><summary data-ar="كم السعر؟">How much will it cost?</summary><p data-ar="الأسعار تبدأ من المذكور في القائمة وتعتمد على حجم حيوانك ونوع فروه. نأكد لك السعر النهائي على واتساب قبل الموعد، فما في مفاجآت.">Prices start from what’s on the menu and depend on your pet’s size and coat. We confirm the final price on WhatsApp before your visit, so there are no surprises.</p></details>
+        <details><summary data-ar="تجون البيت؟">Do you come to my home?</summary><p data-ar="إيه، سيارة التجميل تجيك لين الباب. اختار «عند بيتك» لما تحجز وقول لنا وين أنت.">Yes — our grooming van comes to your door. Choose “At your home” when you book and tell us where you are.</p></details>
+        <details><summary data-ar="كم ياخذ التشذيب؟">How long does a groom take?</summary><p data-ar="من 30 دقيقة إلى 3 ساعات، حسب الخدمة وحجم حيوانك ونوع فروه.">From 30 minutes to 3 hours, depending on the service and your pet’s size and coat.</p></details>
+        <details><summary data-ar="كيف أحجز؟">How do I book?</summary><p data-ar="اختار المكان والخدمة والوقت فوق، وتنفتح واتساب ورسالتك جاهزة. اضغط إرسال ونأكد موعدك خلال ثواني، بأي وقت.">Choose where, what and when above, and WhatsApp opens with your booking ready. Press send and we confirm your time in seconds, any time of day.</p></details>
+        <details><summary data-ar="حيواني يخاف. عادي؟">My pet gets nervous. Is that okay?</summary><p data-ar="أكيد. نشتغل بهدوء وبدون استعجال، ونعطيه وقته. قول لنا في الملاحظات لما تحجز.">Of course. We work calmly, never rush, and give every pet the time they need. Mention it in the notes when you book.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Visit -->
+  <section class="sec" id="visit" aria-labelledby="visit-title" style="padding-top:clamp(40px,6vw,80px)">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="kicker rv" data-ar="موقعنا">Visit</p>
+        <h2 class="h2 rv" id="visit-title" style="--d:.06s" data-ar='تلقانا في <span class="serif accent">JVC.</span>'>Find us in <span class="serif accent">JVC.</span></h2>
+      </div>
+      <div class="visit">
+        <div class="map rv">
+          <iframe src="https://www.google.com/maps?q=Furry+Friends+JVC,+Sobha+Daffodil,+Dubai&ll=25.0470909,55.2061364&z=16&output=embed" title="Map showing Furry Friends in JVC" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <a class="btn" href="https://www.google.com/maps/place/Furry+Friends+JVC/@25.0470909,55.2061364,17z/data=!4m6!3m5!1s0x3e5f6dc907abf60d:0xa665965d3df1e7f7!8m2!3d25.0470909!4d55.2061364!16s%2Fg%2F11b6345433" target="_blank" rel="noopener" data-ar="افتح في الخرائط">Open in Maps</a>
+        </div>
+        <div class="info rv" style="--d:.08s">
+          <div><h4 data-ar="العنوان">Address</h4><p data-ar="محل 3، صبحا دافوديل،<br>البرشاء جنوب 4، جميرا فيلج سيركل، دبي">Shop 3, Sobha Daffodil,<br>Al Barsha South 4, Jumeirah Village Circle, Dubai</p></div>
+          <div><h4 data-ar="الدوام">Hours</h4><p data-ar="كل يوم، 9 ص – 6 م">Every day, 9 AM – 6 PM</p></div>
+          <div><h4 data-ar="اتصل أو راسلنا">Call or message</h4><a class="tel" href="tel:+971563334114">056 333 4114</a></div>
+          <div class="row">
+            <a class="btn" data-wa href="#">__WA_ICON__ <span data-ar="راسلنا على واتساب">WhatsApp us</span></a>
+            <a class="btn ghost" href="https://www.google.com/maps/dir/?api=1&amp;destination=25.0470909,55.2061364" target="_blank" rel="noopener" data-ar="الاتجاهات">Directions</a>
           </div>
         </div>
       </div>
-      <p class="phone-note" data-ar="حجز الساعة 9:41 م بعد الدوام، وتأكد خلال ثواني.">Booked at 9:41 PM, after closing. Confirmed in seconds.</p>
     </div>
-  </div>
-</section>
+  </section>
 
-<section id="prices" class="tight" aria-labelledby="prices-title">
-  <div class="head">
-    <div>
-      <p class="kicker rv" data-ar="قائمة الخدمات">Grooming menu</p>
-      <h2 class="h2 rv" id="prices-title" style="--d:.06s" data-ar="الأسعار.">Prices.</h2>
+  <!-- The end -->
+  <section class="end" aria-labelledby="end-title">
+    <div class="wrap">
+      <h2 class="h2 rv" id="end-title" data-ar='جاهز <span class="serif accent">لـلوك جديد؟</span>'>Ready for a <span class="serif accent">fresh look?</span></h2>
+      <div class="cta-row rv" style="--d:.08s">
+        <a class="btn" href="#book">__WA_ICON__ <span data-ar="احجز موعد">Book a groom</span></a>
+        <a class="btn ghost" href="tel:+971563334114" data-ar="اتصل فينا">Call us</a>
+      </div>
     </div>
-    <p class="rv" style="--d:.12s" data-ar="كل حيوان يختلف، فالأسعار تبدأ من المذكور هنا وتعتمد على الحجم ونوع الفرو. اضغط على أي خدمة عشان تحجزها.">Every pet is different, so prices start from what you see here and depend on size and coat. Tap a service to book it.</p>
-  </div>
-  <div class="rows">
-    <a class="row rv" href="#" data-wa data-service="a Full Grooming With Haircut" data-service-ar="تشذيب كامل مع قص" data-thumb="A"><span class="no">01</span><span class="name" data-ar="تشذيب كامل مع قص<small>استحمام وتجفيف وقص كامل.</small>">Full Grooming With Haircut<small>Bath, blow dry and a full haircut.</small></span><span class="time" data-ar="1 – 3 ساعات">1 – 3 hr</span><span class="price" data-ar="<small>يبدأ من</small>260 درهم"><small>from</small>AED 260</span><span class="go" data-ar="احجز ←">Book →</span></a>
-    <a class="row rv" href="#" data-wa data-service="a Full Grooming without Haircut" data-service-ar="تشذيب كامل بدون قص" data-thumb="G"><span class="no">02</span><span class="name" data-ar="تشذيب كامل بدون قص<small>التشذيب الكامل مع الحفاظ على الطول.</small>">Full Grooming without Haircut<small>The full groom, keeping the length.</small></span><span class="time" data-ar="45 د – ساعتين">45 min – 2 hr</span><span class="price" data-ar="<small>يبدأ من</small>195 درهم"><small>from</small>AED 195</span><span class="go" data-ar="احجز ←">Book →</span></a>
-    <a class="row rv" href="#" data-wa data-service="a Bath &amp; Blow Dry" data-service-ar="استحمام وتجفيف" data-thumb="F"><span class="no">03</span><span class="name" data-ar="استحمام وتجفيف<small>تنظيف عميق ولمسة ناعمة في الآخر.</small>">Bath &amp; Blow Dry<small>A deep clean and a fluffy finish.</small></span><span class="time" data-ar="30 د – ساعتين">30 min – 2 hr</span><span class="price" data-ar="<small>يبدأ من</small>130 درهم"><small>from</small>AED 130</span><span class="go" data-ar="احجز ←">Book →</span></a>
-    <a class="row rv" href="#" data-wa data-service="a Standard Cut" data-service-ar="قص عادي" data-thumb="I"><span class="no">04</span><span class="name" data-ar="قص عادي<small>ترتيب سريع بين جلسات التشذيب.</small>">Standard Cut<small>A tidy trim between full grooms.</small></span><span class="time" data-ar="45 د – ساعة ونص">45 min – 1.5 hr</span><span class="price" data-ar="<small>يبدأ من</small>130 درهم"><small>from</small>AED 130</span><span class="go" data-ar="احجز ←">Book →</span></a>
-    <a class="row rv" href="#" data-wa data-service="the Furmination Experience" data-service-ar="إزالة الوبر الزائد (Furmination)" data-thumb="C"><span class="no">05</span><span class="name" data-ar="إزالة الوبر الزائد<small>يشيل الفرو الميت من الطبقة السفلية.</small>">Furmination Experience<small>De-shedding that lifts the loose undercoat.</small></span><span class="time" data-ar="30 د">30 min</span><span class="price" data-ar="<small>يبدأ من</small>65 درهم"><small>from</small>AED 65</span><span class="go" data-ar="احجز ←">Book →</span></a>
-    <a class="row rv" href="#" data-wa data-service="Nail Caps" data-service-ar="أغطية الأظافر" data-thumb="D"><span class="no">06</span><span class="name" data-ar="أغطية الأظافر<small>أغطية ناعمة تحمي الأرضيات والأثاث.</small>">Nail Caps<small>Soft caps that protect floors and furniture.</small></span><span class="time" data-ar="45 د – ساعة">45 min – 1 hr</span><span class="price" data-ar="260 درهم">AED 260</span><span class="go" data-ar="احجز ←">Book →</span></a>
-  </div>
-  <p class="note rv" data-ar="الأسعار بالدرهم الإماراتي، ونأكد لك السعر النهائي على واتساب قبل الموعد.">Prices in AED. Your final price is confirmed on WhatsApp before your visit.</p>
-</section>
-
-<section id="home-visits" class="tight" aria-labelledby="home-title">
-  <div class="split">
-    <div class="pic rv" data-img="B" role="img" aria-label="A groomer styling a small white dog on the grooming table"></div>
-    <div>
-      <p class="kicker rv" data-ar="تجميل متنقل">Mobile grooming</p>
-      <h2 class="h2 rv" id="home-title" style="--d:.06s" data-ar='نجيك لين <span class="accent">بيتك.</span>'>We come to <span class="accent">you.</span></h2>
-      <p class="rv" style="--d:.12s" data-ar="بدون مشاوير ولا انتظار. فريقنا يجيب خدمة التجميل لين باب بيتك.">No car rides, no waiting rooms. Our groomers bring the grooming to your doorstep.</p>
-      <a class="btn rv" style="--d:.18s" data-wa data-text="home" href="#">__WA_ICON__ <span data-ar="احجز زيارة منزلية">Book a home visit</span></a>
+    <div class="giant-wrap" aria-hidden="true">
+      <img class="peek p1" src="photos/c_wave.webp" alt="" loading="lazy">
+      <img class="peek p2" src="photos/c_pom.webp" alt="" loading="lazy">
+      <div class="giant">Furry Friends<i>.</i></div>
+      <div class="giant mirror">Furry Friends<i>.</i></div>
     </div>
-  </div>
-</section>
+  </section>
+</main>
 
-<section class="tight" aria-labelledby="pets-title">
-  <div class="split flip">
-    <div class="pic wide rv" data-img="H" role="img" aria-label="A groomer trimming a long-haired cat"></div>
-    <div>
-      <p class="kicker rv" data-ar="لكل الحيوانات">Every pet</p>
-      <h2 class="h2 rv" id="pets-title" style="--d:.06s" data-ar="قطط وطيور وحيوانات صغيرة بعد.">Cats, birds and small pets too.</h2>
-      <ul class="ticks rv" style="--d:.12s">
-        <li data-ar="قص واستحمام">Haircuts and baths</li>
-        <li data-ar="تقليم الأظافر">Nail clipping</li>
-        <li data-ar="العناية بالأذن والعيون">Ear and eye care</li>
-        <li data-ar="تنظيف الأسنان">Teeth cleaning</li>
-      </ul>
-      <a class="textlink rv" style="--d:.18s" data-wa data-text="ask" href="#" data-ar="اسألنا عن حيوانك ←">Ask about your pet →</a>
-    </div>
-  </div>
-</section>
-
-<div class="strip rv" aria-label="Freshly groomed pets">
-  <div data-img="L" role="img" aria-label="A groomed puppy in pyjamas"></div>
-  <div data-img="E" role="img" aria-label="A dog in the bath"></div>
-  <div data-img="J" role="img" aria-label="A groomed puppy with a bandana"></div>
-  <div data-img="G" role="img" aria-label="A dog being towel-dried"></div>
-  <div data-img="A" role="img" aria-label="A poodle having a trim"></div>
-</div>
-
-<section id="reviews" aria-labelledby="reviews-title">
-  <div class="head">
-    <div>
-      <p class="kicker rv" data-ar="آراء العملاء على Fresha">Reviews on Fresha</p>
-      <h2 class="h2 rv" id="reviews-title" style="--d:.06s" data-ar='<span class="accent">4.7</span> من 46 تقييم.'><span class="accent">4.7</span> from 46 reviews.</h2>
-    </div>
-  </div>
-  <div class="review-top">
-    <blockquote class="rv">
-      <p class="quote">I’m extremely satisfied with the service. He was beautifully groomed, and even the tartar was removed from his teeth. All recommendations for this wonderful team.</p>
-      <p class="by"><span class="stars">★★★★★</span>Nikolina R · Full Grooming With Haircut</p>
-    </blockquote>
-    <div class="pic rv" style="--d:.1s" data-img="I" role="img" aria-label="A freshly groomed white poodle with a bow tie"></div>
-  </div>
-  <div class="more">
-    <div class="rv"><p>Excellent trustworthy people, highly recommend.</p><span>★★★★★ · Bronwyn F</span></div>
-    <div class="rv" style="--d:.06s"><p>Perfect service and very friendly.</p><span>★★★★★ · Ceyda C</span></div>
-    <div class="rv" style="--d:.12s"><p>Professional as always and kind. Thank you.</p><span>★★★★★ · Manal E</span></div>
-    <div class="rv" style="--d:.18s"><p>Always happy with the service!</p><span>★★★★★ · Kaitlin L</span></div>
-  </div>
-</section>
-
-<section id="questions" class="tight" aria-labelledby="faq-title">
-  <div class="head">
-    <div>
-      <p class="kicker rv" data-ar="أسئلة">Questions</p>
-      <h2 class="h2 rv" id="faq-title" style="--d:.06s" data-ar="حلو تعرف.">Good to know.</h2>
-    </div>
-  </div>
-  <div class="faq rv">
-    <details><summary data-ar="أي حيوانات تعتنون فيها؟">What pets do you groom?</summary><p data-ar="الكلاب والقطط والطيور والقوارض.">Dogs, cats, birds and rodents.</p></details>
-    <details><summary data-ar="تجون البيت؟">Do you come to my home?</summary><p data-ar="إيه، عندنا تجميل متنقل لين باب بيتك. اضغط «احجز زيارة منزلية» وقول لنا وين أنت.">Yes — we offer mobile grooming at your doorstep. Tap “Book a home visit” and tell us where you are.</p></details>
-    <details><summary data-ar="كم ياخذ التشذيب؟">How long does a groom take?</summary><p data-ar="من 30 دقيقة إلى 3 ساعات، حسب الخدمة وحجم حيوانك ونوع فروه.">From 30 minutes to 3 hours, depending on the service and your pet’s size and coat.</p></details>
-    <details><summary data-ar="كيف أحجز؟">How do I book?</summary><p data-ar="اضغط أي زر «احجز» وتنفتح واتساب ورسالتك جاهزة. نرد خلال ثواني، بأي وقت.">Tap any “Book” button — WhatsApp opens with your message ready. We reply in seconds, any time of day.</p></details>
-    <details><summary data-ar="تقدرون تنصحوني بالعناية في البيت؟">Can you help with grooming at home between visits?</summary><p data-ar="أكيد. نعطيك نصايح لروتين تجميل في البيت يسهّل الجلسات عليك وعلى حيوانك.">Of course. We’re happy to advise on a routine at home that makes grooming sessions easier for you and your pet.</p></details>
-  </div>
-</section>
-
-<section id="visit" aria-labelledby="visit-title">
-  <div class="head">
-    <div>
-      <p class="kicker rv" data-ar="موقعنا">Visit</p>
-      <h2 class="h2 rv" id="visit-title" style="--d:.06s" data-ar="تلقانا في JVC.">Find us in JVC.</h2>
-    </div>
-  </div>
-  <div class="visit">
-    <div class="rv"><p class="kicker" data-ar="العنوان">Address</p><p data-ar="محل 3، صبحا دافوديل،<br>قرية جميرا الدائرية، دبي">Shop 3, Sobha Daffodil,<br>Jumeirah Village Circle, Dubai</p><a class="textlink" href="https://www.google.com/maps/search/?api=1&amp;query=Furry+Friends+Sobha+Daffodil+Jumeirah+Village+Circle+Dubai" target="_blank" rel="noopener" data-ar="الاتجاهات ←">Get directions →</a></div>
-    <div class="rv" style="--d:.08s"><p class="kicker" data-ar="الدوام">Hours</p><p data-ar="كل يوم<br>9 ص – 6 م">Every day<br>9 AM – 6 PM</p></div>
-    <div class="rv" style="--d:.16s"><p class="kicker" data-ar="الحجز">Bookings</p><p data-ar="على واتساب،<br>ليل ونهار">On WhatsApp,<br>day or night</p><a class="textlink" data-wa href="#" data-ar="راسلنا ←">Message us →</a></div>
-  </div>
-</section>
-
-<div class="closing">
-  <h2 class="h2 rv" data-ar="جاهز لإطلالة جديدة؟">Ready for a fresh look?</h2>
-  <a class="btn rv" style="--d:.08s" data-wa href="#">__WA_ICON__ <span data-ar="احجز على واتساب">Book on WhatsApp</span></a>
-  <div class="giant" aria-hidden="true">Furry Friends<span>.</span></div>
-  <div class="giant mirror" aria-hidden="true">Furry Friends<span>.</span></div>
-</div>
-
-<footer>
-  <span data-ar="© 2026 <span class='brand'>Furry Friends</span> لتجميل الحيوانات · قرية جميرا الدائرية، دبي">© 2026 Furry Friends Pet Grooming · Jumeirah Village Circle, Dubai</span>
-  <span data-ar="كلاب · قطط · طيور · حيوانات صغيرة">Dogs · Cats · Birds · Small pets</span>
+<footer class="wrap foot">
+  <span data-ar="© 2026 <span class='brand'>Furry Friends</span> لتجميل الحيوانات · جميرا فيلج سيركل، دبي">© 2026 Furry Friends Pet Grooming · Jumeirah Village Circle, Dubai</span>
+  <span><a href="#services" data-ar="الخدمات">Services</a> · <a href="#book" data-ar="احجز">Book</a> · <a href="#visit" data-ar="موقعنا">Visit</a></span>
 </footer>
 
 <div class="dock" id="dock">
-  <p data-ar="<b>احجز على واتساب</b>يتأكد خلال ثواني، ليل ونهار"><b>Book on WhatsApp</b>Confirmed in seconds, day or night</p>
-  <a class="btn" data-wa href="#">__WA_ICON__ <span data-ar="احجز الحين">Book now</span></a>
+  <p data-ar="<b>احجز على واتساب</b>يتأكد خلال ثواني"><b>Book on WhatsApp</b>Confirmed in seconds</p>
+  <a class="btn" href="#book">__WA_ICON__ <span data-ar="احجز">Book</span></a>
 </div>
-<div class="thumb" id="thumb" aria-hidden="true"></div>
 
 <script>
-// The shop's WhatsApp number in international form, digits only (e.g. 9715XXXXXXXX). A link can try another number
-// with ?wa=9715XXXXXXXX. Without one, WhatsApp opens and asks who to send the message to.
-const WHATSAPP = '__WA_NUMBER__';
-
-// Each photo is kept once here and put wherever data-img asks for it.
-const IMGS = __IMGS__;
-
 (() => {
-  const set = (el, key) => { const src = IMGS[key]; if (src) el.style.backgroundImage = `url("${src}")`; };
-  document.querySelectorAll('[data-img]').forEach((el) => set(el, el.dataset.img));
-
+  // ── The shop ──
   const params = new URLSearchParams(location.search);
-  const number = (params.get('wa') || WHATSAPP).replace(/\D/g, '');
-  const store = { get: (k) => { try { return localStorage.getItem(k); } catch { return null; } }, set: (k, v) => { try { localStorage.setItem(k, v); } catch {} } };
+  const WHATSAPP = (params.get('wa') || '__WA_NUMBER__').replace(/\D/g, '');
+  const HOURS = { open: 9, close: 18 }; // every day, Dubai time; the last booking starts an hour before closing
+  const SERVICES = [
+    { id: 'full-cut', img: 'c_bichon', price: 260, from: true, en: ['Full Grooming With Haircut', 'Bath, blow dry and a full haircut.', '1 – 3 hr'], ar: ['تشذيب كامل مع قص', 'استحمام وتجفيف وقص كامل.', '1 – 3 ساعات'] },
+    { id: 'full', img: 'c_pom', price: 195, from: true, en: ['Full Grooming without Haircut', 'The full groom, keeping the length.', '45 min – 2 hr'], ar: ['تشذيب كامل بدون قص', 'التشذيب الكامل مع الحفاظ على الطول.', '45 د – ساعتين'] },
+    { id: 'bath', img: 'c_towel', price: 130, from: true, en: ['Bath & Blow Dry', 'A deep clean and a fluffy finish.', '30 min – 2 hr'], ar: ['استحمام وتجفيف', 'تنظيف عميق ولمسة ناعمة في الآخر.', '30 د – ساعتين'] },
+    { id: 'cut', img: 'c_poodle', price: 130, from: true, en: ['Standard Cut', 'A tidy trim between full grooms.', '45 min – 1.5 hr'], ar: ['قص عادي', 'ترتيب سريع بين جلسات التشذيب.', '45 د – ساعة ونص'] },
+    { id: 'furminate', img: 'c_samoyed', price: 65, from: true, en: ['Furmination Experience', 'De-shedding that lifts the loose undercoat.', '30 min'], ar: ['إزالة الوبر الزائد', 'يشيل الفرو الميت من الطبقة السفلية.', '30 د'] },
+    { id: 'caps', img: 'c_shihtzu', price: 260, from: false, en: ['Nail Caps', 'Soft caps that protect floors and furniture.', '45 min – 1 hr'], ar: ['أغطية الأظافر', 'أغطية ناعمة تحمي الأرضيات والأثاث.', '45 د – ساعة'] },
+    { id: 'unsure', en: ['Not sure yet', 'Tell us about your pet and we’ll suggest the right groom.'], ar: ['مو متأكد', 'قول لنا عن حيوانك ونقترح لك الأنسب.'] },
+  ];
+  // Real Google reviews of Furry Friends JVC, shortened.
+  const REVIEWS = [
+    ['Alexandra E.', 'Carmen did a wonderful job with my 26 kg Golden! A bit hard to control but she managed him properly and left him smelling amazing, with a very soft fur and nicely trimmed nails.'],
+    ['Lakshmi S.', 'Snowie is very comfortable going there. We have been a customer with furry friends for more than 8 years now and we have had the best service.'],
+    ['Amna H.', 'Carmen did an awesome job grooming my cat, Minnu! She made sure Minnu stayed calm and happy throughout the entire grooming process…'],
+    ['Sunidhi A.', 'Carmen and her team did an amazing job with my dog’s bath! They arrived right on time, were extremely sweet, and made the whole experience stress-free.'],
+    ['Jame A.', 'I use the Furry Friends mobile service for my 2 dogs, a Labrador and a Desert Dog. Carmen does an excellent job on full grooms… I can’t recommend them enough.'],
+    ['Rachelle H.', 'As always a thorough groom for my Persian cat with extra care taken around his broken arm and a happy, calm cat upon return.'],
+    ['Shyna G.', 'Amazing work done by Carmen and team! Oscar looks and smells great after a good grooming session from Furry Friends.'],
+    ['Neeta', 'We totally trust Furry Friends for grooming our cats and dog. We have been using their services for over 6 yrs now. Thank you Alan for taking utmost care and compassion towards our pets.'],
+    ['Bina J.', 'Amazing as always! Chewy’s been coming to Alan and his team since moving to Dubai 6 months ago.'],
+    ['Harish P.', 'Very professional, courteous and affordable. Feel very comfortable leaving my pets there for grooming and other pet care. Highly recommended.'],
+    ['Hisham B.', 'Best place in jvc to get my Huskies groomed and de-shedded'],
+    ['Joe H.', 'Amazing groom for our golden Roy done by the lovely Carmen, thank you!'],
+  ];
 
-  // The WhatsApp message each button starts, in the page's language.
-  const MESSAGES = {
-    en: {
-      book: (s) => (s ? `Hi Furry Friends! I'd like to book ${s} for my pet.` : `Hi Furry Friends! I'd like to book a grooming appointment.`),
-      home: `Hi Furry Friends! I'd like to book a home grooming visit.`,
-      ask: `Hi Furry Friends! I'd like to ask about grooming for my pet.`,
-    },
-    ar: {
-      book: (s) => (s ? `هلا Furry Friends! أبي أحجز ${s} لحيواني.` : `هلا Furry Friends! أبي أحجز موعد تجميل.`),
-      home: `هلا Furry Friends! أبي أحجز زيارة تجميل في البيت.`,
-      ask: `هلا Furry Friends! عندي سؤال عن تجميل حيواني.`,
-    },
-  };
-
-  // Open now? The shop's hours in Dubai time, every day 9 AM – 6 PM.
-  const status = document.getElementById('status');
-  const showStatus = (lang) => {
-    const hour = Number(new Intl.DateTimeFormat('en-GB', { timeZone: 'Asia/Dubai', hour: '2-digit', hourCycle: 'h23' }).format(new Date()));
-    const open = hour >= 9 && hour < 18;
-    status.classList.toggle('shut', !open);
-    status.querySelector('b').textContent = lang === 'ar'
-      ? (open ? 'مفتوح الحين · لين 6 م' : 'مسكّر الحين · نفتح 9 ص')
-      : (open ? 'Open now · until 6 PM' : 'Closed now · opens 9 AM');
-  };
-
-  // English or Arabic: every [data-ar] swaps its words, the page reads right to left, and WhatsApp messages follow.
-  const toggle = document.getElementById('lang');
-  const setLang = (lang) => {
-    const ar = lang === 'ar';
-    document.documentElement.lang = lang;
-    document.documentElement.dir = ar ? 'rtl' : 'ltr';
-    document.querySelectorAll('[data-ar]').forEach((el) => {
-      if (el.dataset.en === undefined) el.dataset.en = el.innerHTML;
-      el.innerHTML = ar ? el.dataset.ar : el.dataset.en;
-    });
-    toggle.innerHTML = ar ? '<span lang="en">English</span>' : '<span lang="ar">عربي</span>';
-    document.title = ar ? 'Furry Friends · تجميل الحيوانات الأليفة في JVC، دبي' : 'Furry Friends · Pet Grooming in JVC, Dubai';
-    const words = MESSAGES[lang];
-    document.querySelectorAll('[data-wa]').forEach((a) => {
-      const kind = a.dataset.text;
-      const service = ar ? a.dataset.serviceAr : a.dataset.service;
-      const text = kind ? words[kind] : words.book(service);
-      a.href = `https://wa.me/${number}?text=${encodeURIComponent(text)}`;
-      a.target = '_blank';
-      a.rel = 'noopener';
-    });
-    showStatus(lang);
-    store.set('ff-lang', lang);
-  };
-  toggle.addEventListener('click', () => setLang(document.documentElement.lang === 'ar' ? 'en' : 'ar'));
-  const first = params.get('lang') || store.get('ff-lang') || ((navigator.language || '').toLowerCase().startsWith('ar') ? 'ar' : 'en');
-  setLang(first === 'ar' ? 'ar' : 'en');
-
-  // Things rise into view as they're scrolled to.
-  const io = new IntersectionObserver((list) => list.forEach((e) => {
-    if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
-  }), { threshold: .12, rootMargin: '0px 0px -6% 0px' });
-  document.querySelectorAll('.rv').forEach((el) => io.observe(el));
-  requestAnimationFrame(() => document.querySelectorAll('.hero .rv').forEach((el) => el.classList.add('in')));
-
+  const $ = (s, el = document) => el.querySelector(s);
+  const $$ = (s, el = document) => [...el.querySelectorAll(s)];
+  const ar = () => document.documentElement.lang === 'ar';
+  const T = (en, arText) => (ar() ? arText : en);
+  const LOCALE = () => (ar() ? 'ar-AE-u-nu-latn' : 'en-GB');
+  const waLink = (text) => `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(text)}`;
   const still = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  // The hero photo drifts slower than the page; the booking bar shows once the hero is passed.
-  const hero = document.querySelector('.hero-img');
-  const dock = document.getElementById('dock');
+  // ── Stars (4.3 fills four and a third) ──
+  const STAR = 'M12 2.6l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.4l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z';
+  const starsHTML = (score, uid) => Array.from({ length: 5 }, (_, i) => {
+    const fill = Math.round(Math.max(0, Math.min(1, score - i)) * 100);
+    const id = `st-${uid}-${i}`;
+    return `<svg viewBox="0 0 24 24" aria-hidden="true"><defs><linearGradient id="${id}"><stop offset="${fill}%" stop-color="#FFC53D"/><stop offset="${fill}%" stop-color="rgba(244,238,227,.2)"/></linearGradient></defs><path fill="url(#${id})" d="${STAR}"/></svg>`;
+  }).join('');
+  $$('[data-stars]').forEach((el, n) => { el.innerHTML = starsHTML(Number(el.dataset.stars), n); });
+
+  // ── Services, built once from the list above ──
+  const esc = (s) => s.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;');
+  SERVICES.filter((s) => s.img).forEach((s, i) => {
+    const card = document.createElement('article');
+    card.className = 'svc rv';
+    card.style.setProperty('--d', `${(i % 3) * 0.07}s`);
+    const both = (en, arText) => `data-en="${esc(en)}" data-ar="${esc(arText)}"`;
+    card.innerHTML = `
+      <div class="svc-stage"><img src="photos/${s.img}.webp" alt="" loading="lazy"></div>
+      <div class="svc-body">
+        <span class="no">${String(i + 1).padStart(2, '0')}</span>
+        <h3 ${both(s.en[0], s.ar[0])}>${esc(s.en[0])}</h3>
+        <p ${both(s.en[1], s.ar[1])}>${esc(s.en[1])}</p>
+        <div class="svc-meta">
+          <span class="time"><svg aria-hidden="true"><use href="#clock"/></svg><span ${both(s.en[2], s.ar[2])}>${s.en[2]}</span></span>
+          <span class="price">${s.from ? `<small ${both('from', 'يبدأ من')}>from</small>` : ''}<span ${both(`AED ${s.price}`, `${s.price} درهم`)}>AED ${s.price}</span></span>
+        </div>
+        <button class="svc-book" type="button" data-pick="${s.id}"><span ${both('Book this', 'احجز هذي')}>Book this</span><svg class="flip" aria-hidden="true"><use href="#arrow"/></svg></button>
+      </div>`;
+    $('#menu').append(card);
+  });
+
+  // ── Reviews ──
+  const track = $('#reviews-track');
+  track.innerHTML = REVIEWS.map(([name, text], i) => `
+    <article class="rev">
+      <span class="stars" role="img" aria-label="5 stars">${starsHTML(5, `r${i}`)}</span>
+      <q>${esc(text)}</q>
+      <footer><span class="av" aria-hidden="true">${name[0]}</span><span><b>${esc(name)}</b><small data-en="Google review" data-ar="تقييم على Google">Google review</small></span><svg class="gmark" aria-hidden="true"><use href="#g"/></svg></footer>
+    </article>`).join('');
+  const page = (dir) => {
+    const rtl = getComputedStyle(track).direction === 'rtl';
+    track.scrollBy({ left: track.clientWidth * 0.8 * dir * (rtl ? -1 : 1), behavior: still ? 'auto' : 'smooth' });
+  };
+  $('#rev-next').onclick = () => page(1);
+  $('#rev-prev').onclick = () => page(-1);
+
+  // ── Words running along the floor ──
+  const fillTrack = () => {
+    const words = T(['Full grooms', 'Bath & blow dry', 'Nail caps', 'De-shedding', 'Cats welcome', 'Home visits', 'Open 7 days'],
+      ['تشذيب كامل', 'استحمام وتجفيف', 'أغطية أظافر', 'إزالة الوبر', 'نهتم بالقطط', 'زيارات منزلية', 'مفتوحين 7 أيام']);
+    $('#track').innerHTML = words.map((w) => `<span>${w}</span>`).join('').repeat(4);
+  };
+
+  // ── Open now (Dubai time) ──
+  const dubaiNow = () => {
+    const p = Object.fromEntries(new Intl.DateTimeFormat('en-GB', { timeZone: 'Asia/Dubai', year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', hourCycle: 'h23' }).formatToParts(new Date()).map((x) => [x.type, x.value]));
+    return { y: +p.year, m: +p.month, d: +p.day, h: +p.hour, min: +p.minute };
+  };
+  const todayKey = () => { const n = dubaiNow(); return `${n.y}-${String(n.m).padStart(2, '0')}-${String(n.d).padStart(2, '0')}`; };
+  const hourLabel = (h, m = 0) => `${h % 12 || 12}${m ? `:${String(m).padStart(2, '0')}` : ''} ${h < 12 ? T('AM', 'ص') : T('PM', 'م')}`;
+  const paintStatus = () => {
+    const { h } = dubaiNow();
+    const open = h >= HOURS.open && h < HOURS.close;
+    $('#status').classList.toggle('closed', !open);
+    $('#status-now').textContent = open
+      ? T(`Open now · until ${hourLabel(HOURS.close)}`, `مفتوح الحين · لين ${hourLabel(HOURS.close)}`)
+      : T(`Closed · opens ${hourLabel(HOURS.open)}`, `مسكّر · نفتح ${hourLabel(HOURS.open)}`);
+  };
+
+  // ── Quick WhatsApp links (no form) ──
+  const paintQuickLinks = () => $$('[data-wa]').forEach((a) => {
+    a.href = waLink(T('Hi Furry Friends! I have a question.', 'هلا Furry Friends! عندي سؤال.'));
+    a.target = '_blank';
+    a.rel = 'noopener';
+  });
+
+  // ── Booking ──
+  const state = { step: 1, where: '', kind: '', size: '', petName: '', breed: '', service: '', day: '', time: '', name: '', address: '', notes: '' };
+  const STEPS = {
+    1: ['Where should we groom?', 'وين نعتني بحيوانك؟', 'In our shop, or at your home.', 'في محلنا، أو عند بيتك.'],
+    2: ['Who’s coming?', 'مين جاي؟', 'So we know who to expect.', 'عشان نعرف مين بيجينا.'],
+    3: ['Which service?', 'أي خدمة؟', 'Prices start from — we confirm yours on WhatsApp.', 'الأسعار تبدأ من المذكور، ونأكد سعرك على واتساب.'],
+    4: ['Which day?', 'أي يوم؟', 'We’re open every day.', 'مفتوحين كل يوم.'],
+    5: ['What time?', 'أي وقت؟', 'We’ll confirm the exact time on WhatsApp.', 'نأكد لك الوقت بالضبط على واتساب.'],
+    6: ['Last bit.', 'آخر شي.', 'Then WhatsApp opens with everything written for you.', 'وبعدها تنفتح واتساب والرسالة جاهزة.'],
+  };
+  const HINTS = {
+    1: ['Choose the shop or your home.', 'اختار المحل أو بيتك.'],
+    2: ['Choose your pet — and a size for dogs.', 'اختار نوع حيوانك، والحجم إذا كلب.'],
+    3: ['Choose a service.', 'اختار خدمة.'],
+    4: ['Choose a day.', 'اختار يوم.'],
+    5: ['Choose a time.', 'اختار وقت.'],
+  };
+  const svc = () => SERVICES.find((s) => s.id === state.service);
+  const paintServiceOptions = () => {
+    $('#svc-opts').innerHTML = SERVICES.map((s) => {
+      const [name, desc, time] = T(s.en, s.ar);
+      const end = s.price ? `<span class="end">${s.from ? `<small>${T('from', 'يبدأ من')}</small>` : ''}${T(`AED ${s.price}`, `${s.price} درهم`)}</span>` : '';
+      return `<label class="opt"><input type="radio" name="service" value="${s.id}" ${state.service === s.id ? 'checked' : ''}><span class="opt-body">${s.img ? `<span class="thumb"><img src="photos/${s.img}.webp" alt="" loading="lazy"></span>` : ''}<span class="t"><b>${name}</b><small>${time ? `${time} · ` : ''}${desc}</small></span>${end}</span></label>`;
+    }).join('');
+  };
+  const paintDays = () => {
+    const now = dubaiNow();
+    const start = Date.UTC(now.y, now.m - 1, now.d);
+    let html = '';
+    for (let i = 0; i < 14; i++) {
+      const d = new Date(start + i * 86400000);
+      const key = d.toISOString().slice(0, 10);
+      const full = i === 0 && now.h >= HOURS.close - 2; // too late to book today
+      const top = i === 0 ? T('Today', 'اليوم') : i === 1 ? T('Tmrw', 'بكرة') : d.toLocaleDateString(LOCALE(), { weekday: 'short', timeZone: 'UTC' });
+      const month = d.toLocaleDateString(LOCALE(), { month: 'short', timeZone: 'UTC' });
+      if (full && state.day === key) state.day = '';
+      html += `<label class="opt"><input type="radio" name="day" value="${key}" ${state.day === key ? 'checked' : ''} ${full ? 'disabled' : ''}><span class="opt-body"><small>${top}</small><b>${d.getUTCDate()}</b><small>${month}</small></span></label>`;
+    }
+    $('#days').innerHTML = html;
+  };
+  const paintSlots = () => {
+    const now = dubaiNow();
+    const isToday = state.day === todayKey();
+    const groups = [[T('Morning', 'الصبح'), []], [T('Afternoon', 'العصر'), []]];
+    for (let h = HOURS.open; h <= HOURS.close - 1; h++) {
+      for (const m of [0, 30]) {
+        if (h === HOURS.close - 1 && m === 30) continue;
+        const past = isToday && h * 60 + m < now.h * 60 + now.min + 60;
+        const v = `${String(h).padStart(2, '0')}:${String(m).padStart(2, '0')}`;
+        if (past && state.time === v) state.time = '';
+        groups[h < 12 ? 0 : 1][1].push(`<label class="opt"><input type="radio" name="time" value="${v}" ${state.time === v ? 'checked' : ''} ${past ? 'disabled' : ''}><span class="opt-body">${hourLabel(h, m)}</span></label>`);
+      }
+    }
+    $('#slots').innerHTML = groups.map(([label, items]) => `<p class="slot-head">${label}</p><div class="slots">${items.join('')}</div>`).join('');
+  };
+
+  const kindText = () => {
+    if (!state.kind) return '';
+    if (state.kind === 'dog' && state.size) return T({ small: 'Small dog', medium: 'Medium dog', large: 'Large dog' }[state.size], { small: 'كلب صغير', medium: 'كلب وسط', large: 'كلب كبير' }[state.size]);
+    return { dog: T('Dog', 'كلب'), cat: T('Cat', 'قطة'), other: T('Pet', 'حيوان') }[state.kind];
+  };
+  const whenText = () => {
+    if (!state.day) return '';
+    const day = new Date(`${state.day}T00:00:00Z`).toLocaleDateString(LOCALE(), { weekday: 'short', day: 'numeric', month: 'short', timeZone: 'UTC' });
+    if (!state.time) return day;
+    const [h, m] = state.time.split(':').map(Number);
+    return T(`${day}, ${hourLabel(h, m)}`, `${day}، ${hourLabel(h, m)}`);
+  };
+  const message = () => {
+    const s = svc();
+    const price = s?.price ? ` (${T(s.from ? `from AED ${s.price}` : `AED ${s.price}`, s.from ? `يبدأ من ${s.price} درهم` : `${s.price} درهم`)})` : '';
+    return [
+      T('Hi Furry Friends! I’d like to book:', 'هلا Furry Friends! أبي أحجز:'),
+      `• ${T('Service', 'الخدمة')}: ${s ? T(s.en, s.ar)[0] : ''}${price}`,
+      `• ${T('Pet', 'الحيوان')}: ${[kindText(), state.petName.trim(), state.breed.trim()].filter(Boolean).join(' · ')}`,
+      `• ${T('Where', 'المكان')}: ${state.where === 'home' ? T(`Home visit — ${state.address.trim()}`, `زيارة منزلية — ${state.address.trim()}`) : T('At your shop in JVC', 'في المحل في JVC')}`,
+      `• ${T('When', 'الموعد')}: ${whenText()}`,
+      `• ${T('Name', 'الاسم')}: ${state.name.trim()}`,
+      ...(state.notes.trim() ? [`• ${T('Notes', 'ملاحظات')}: ${state.notes.trim()}`] : []),
+    ].join('\n');
+  };
+  const valid = (n) => ({
+    1: !!state.where,
+    2: !!state.kind && (state.kind !== 'dog' || !!state.size),
+    3: !!state.service,
+    4: !!state.day,
+    5: !!state.time,
+    6: !!state.name.trim() && (state.where !== 'home' || !!state.address.trim()),
+  })[n];
+
+  // What changes as people choose (the options they're using aren't drawn again).
+  const refresh = () => {
+    const n = state.step;
+    $('#next').classList.toggle('wait', !valid(n));
+    $('#send').classList.toggle('wait', !valid(6));
+    $('#send').href = waLink(message());
+    $('#f-address').hidden = state.where !== 'home';
+    $('#size-wrap').hidden = state.kind !== 'dog';
+    if (valid(n)) $('#hint').textContent = '';
+    $('#s-where').textContent = state.where ? T(state.where === 'shop' ? 'At the shop' : 'At home', state.where === 'shop' ? 'في المحل' : 'عند البيت') : '';
+    $('#s-pet').textContent = [kindText(), state.petName.trim()].filter(Boolean).join(' · ');
+    $('#s-service').textContent = svc() ? T(svc().en, svc().ar)[0] : '';
+    $('#s-when').textContent = whenText();
+    $('#s-name').textContent = state.name.trim();
+  };
+  // Showing a step.
+  const paintStep = (focus) => {
+    const n = state.step;
+    $$('.step').forEach((f) => f.classList.toggle('on', +f.dataset.step === n));
+    $$('#progress i').forEach((b, i) => b.classList.toggle('on', i < n));
+    $('#step-no').textContent = T(`Step ${n} of 6`, `الخطوة ${n} من 6`);
+    $('#step-title').textContent = T(STEPS[n][0], STEPS[n][1]);
+    $('#step-sub').textContent = T(STEPS[n][2], STEPS[n][3]);
+    $('#back').style.visibility = n === 1 ? 'hidden' : 'visible';
+    $('#next').hidden = n === 6;
+    $('#send').hidden = n !== 6;
+    $('#hint').textContent = '';
+    if (n === 4) paintDays();
+    if (n === 5) paintSlots();
+    refresh();
+    if (focus) $('#step-title').focus({ preventScroll: true });
+  };
+  const go = (n) => { state.step = Math.max(1, Math.min(6, n)); paintStep(true); };
+
+  const wizard = $('#wizard');
+  const AUTO = { where: 1, service: 3, day: 4, time: 5 }; // one tap is all these steps need
+  let auto;
+  wizard.addEventListener('change', (e) => {
+    const { name, value, type } = e.target;
+    if (type !== 'radio' || !(name in state)) return;
+    state[name] = value;
+    if (name === 'kind' && value !== 'dog') { state.size = ''; $$('input[name="size"]').forEach((r) => { r.checked = false; }); }
+    if (name === 'day') state.time = '';
+    refresh();
+    clearTimeout(auto);
+    if (AUTO[name] === state.step) auto = setTimeout(() => go(state.step + 1), 280);
+  });
+  wizard.addEventListener('input', (e) => {
+    const { name, value, type } = e.target;
+    if (type === 'radio' || !(name in state)) return;
+    state[name] = value;
+    e.target.closest('.field')?.classList.remove('bad');
+    refresh();
+  });
+  wizard.addEventListener('submit', (e) => e.preventDefault());
+  $('#next').onclick = () => {
+    if (valid(state.step)) go(state.step + 1);
+    else $('#hint').textContent = T(...HINTS[state.step]);
+  };
+  $('#back').onclick = () => go(state.step - 1);
+  $('#send').addEventListener('click', (e) => {
+    if (!valid(6)) {
+      e.preventDefault();
+      if (!state.name.trim()) $('#f-name').classList.add('bad');
+      if (state.where === 'home' && !state.address.trim()) $('#f-address').classList.add('bad');
+      $('.field.bad input')?.focus();
+      return;
+    }
+    $('#send-again').href = $('#send').href = waLink(message());
+    setTimeout(() => {
+      $('#steps-wrap').hidden = true;
+      $('#b-nav').hidden = true;
+      $('#done').classList.add('on');
+      $('#done').focus({ preventScroll: true });
+    }, 150);
+  });
+  $('#restart').onclick = () => {
+    const keep = { name: state.name, address: state.address, where: state.where };
+    Object.assign(state, { kind: '', size: '', petName: '', breed: '', service: '', day: '', time: '', notes: '' });
+    wizard.reset();
+    $('#your-name').value = keep.name;
+    $('#address').value = keep.address;
+    if (keep.where) $(`input[name="where"][value="${keep.where}"]`).checked = true;
+    $('#steps-wrap').hidden = false;
+    $('#b-nav').hidden = false;
+    $('#done').classList.remove('on');
+    paintServiceOptions();
+    go(keep.where ? 2 : 1);
+  };
+  const choose = (name, value) => { const r = $(`input[name="${name}"][value="${value}"]`); if (r) r.checked = true; state[name] = value; };
+  const startAt = (step) => {
+    clearTimeout(auto);
+    state.step = step;
+    paintStep(false);
+    $('#book').scrollIntoView({ behavior: still ? 'auto' : 'smooth' });
+  };
+  document.addEventListener('click', (e) => {
+    const pick = e.target.closest('[data-pick]');
+    if (pick) { choose('service', pick.dataset.pick); startAt(!state.where ? 1 : !valid(2) ? 2 : 4); }
+    if (e.target.closest('[data-home]')) { choose('where', 'home'); startAt(!valid(2) ? 2 : !state.service ? 3 : 4); }
+    if (e.target.closest('[data-cat]')) {
+      choose('kind', 'cat');
+      state.size = '';
+      startAt(!state.where ? 1 : !state.service ? 3 : 4);
+    }
+  });
+
+  // ── English / Arabic ──
+  const applyLang = (lang) => {
+    const root = document.documentElement;
+    root.lang = lang;
+    root.dir = lang === 'ar' ? 'rtl' : 'ltr';
+    $$('[data-ar]').forEach((el) => {
+      if (el.dataset.en === undefined) el.dataset.en = el.innerHTML;
+      el.innerHTML = lang === 'ar' ? el.dataset.ar : el.dataset.en;
+    });
+    $$('[data-ar-ph]').forEach((el) => {
+      if (el.dataset.enPh === undefined) el.dataset.enPh = el.placeholder;
+      el.placeholder = lang === 'ar' ? el.dataset.arPh : el.dataset.enPh;
+    });
+    $$('[data-ar-aria]').forEach((el) => {
+      if (el.dataset.enAria === undefined) el.dataset.enAria = el.getAttribute('aria-label');
+      el.setAttribute('aria-label', lang === 'ar' ? el.dataset.arAria : el.dataset.enAria);
+    });
+    const btn = $('#lang');
+    btn.textContent = lang === 'ar' ? 'EN' : 'عربي';
+    btn.setAttribute('aria-label', lang === 'ar' ? 'Read this page in English' : 'اقرأ الصفحة بالعربي');
+    document.title = lang === 'ar' ? 'Furry Friends · تجميل الحيوانات في JVC، دبي' : 'Furry Friends · Pet Grooming in JVC, Dubai';
+    try { localStorage.setItem('ff-lang', lang); } catch {}
+    fillTrack();
+    paintStatus();
+    paintQuickLinks();
+    paintServiceOptions();
+    paintStep(false);
+  };
+  $('#lang').onclick = () => applyLang(ar() ? 'en' : 'ar');
+  let saved = null;
+  try { saved = localStorage.getItem('ff-lang'); } catch {}
+  applyLang(params.get('lang') === 'ar' || (!params.get('lang') && saved === 'ar') ? 'ar' : 'en');
+  setInterval(paintStatus, 60000);
+
+  // ── Scroll: reveals, the nav, the book bar, pets drifting at different speeds ──
+  const io = new IntersectionObserver((entries) => entries.forEach((en) => {
+    if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); }
+  }), { rootMargin: '0px 0px -8% 0px' });
+  $$('.rv').forEach((el) => io.observe(el));
+  const nav = $('#nav'), dock = $('#dock'), pets = $$('.pet'), book = $('#book');
   let ticking = false;
   const onScroll = () => {
-    if (ticking) return;
-    ticking = true;
-    requestAnimationFrame(() => {
-      const y = scrollY;
-      if (!still) hero.style.setProperty('--py', `${Math.min(y * .28, 260)}px`);
-      dock.classList.toggle('on', y > innerHeight * .7 && innerHeight + y < document.body.scrollHeight - 180);
-      ticking = false;
-    });
+    const y = scrollY;
+    nav.classList.toggle('solid', y > 30);
+    const b = book.getBoundingClientRect();
+    dock.classList.toggle('show', y > innerHeight * 0.8 && !(b.top < innerHeight && b.bottom > 0));
+    if (!still && innerWidth >= 1000 && y < innerHeight * 1.3) pets.forEach((p) => p.style.setProperty('--py', `${(-y * Number(p.style.getPropertyValue('--p'))).toFixed(1)}px`));
+    ticking = false;
   };
-  addEventListener('scroll', onScroll, { passive: true });
+  addEventListener('scroll', () => { if (!ticking) { ticking = true; requestAnimationFrame(onScroll); } }, { passive: true });
   onScroll();
-
-  // On a computer, a photo of each service follows the pointer over its row.
-  const thumb = document.getElementById('thumb');
-  if (matchMedia('(hover: hover)').matches) {
-    document.querySelectorAll('.row[data-thumb]').forEach((row) => {
-      row.addEventListener('mouseenter', () => { set(thumb, row.dataset.thumb); thumb.classList.add('on'); });
-      row.addEventListener('mouseleave', () => thumb.classList.remove('on'));
-      row.addEventListener('mousemove', (e) => {
-        const x = document.documentElement.dir === 'rtl' ? e.clientX - 150 : e.clientX + 150;
-        thumb.style.left = `${Math.max(140, Math.min(x, innerWidth - 140))}px`;
-        thumb.style.top = `${e.clientY}px`;
-      });
-    });
-  }
-
-  // The chat plays out once it's on screen: each reply after a moment of typing.
-  const steps = [...document.querySelectorAll('#chat [data-step]')];
-  const typing = document.getElementById('typing');
-  const play = () => {
-    if (still) { steps.forEach((m) => m.classList.add('in')); return; }
-    let t = 300;
-    steps.forEach((m) => {
-      const ours = m.classList.contains('us');
-      if (ours) {
-        setTimeout(() => { m.before(typing); typing.classList.add('on'); }, t);
-        t += 1300;
-      }
-      setTimeout(() => { typing.classList.remove('on'); m.classList.add('in'); }, t);
-      t += ours ? 1100 : 900;
-    });
-  };
-  const chatIo = new IntersectionObserver((list) => {
-    if (list.some((e) => e.isIntersecting)) { play(); chatIo.disconnect(); }
-  }, { threshold: .4 });
-  chatIo.observe(document.getElementById('chat'));
 })();
 </script>
 </body>
