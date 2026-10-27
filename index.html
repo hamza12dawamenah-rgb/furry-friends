@@ -44,7 +44,10 @@
     --ease: cubic-bezier(.22, 1, .36, 1);
     --spring: cubic-bezier(.34, 1.56, .64, 1);
     --floor: clamp(62px, 9vh, 92px);
+    --dir: 1;
+    --bounce: cubic-bezier(.25, .8, .35, 1);
   }
+  html[dir="rtl"] { --dir: -1; }
   html[lang="ar"] {
     --display: 'Alexandria', 'Bricolage Grotesque', system-ui, sans-serif;
     --serif: 'Alexandria', system-ui, sans-serif;
@@ -83,7 +86,9 @@
   .btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 52px; padding: 0 24px; border-radius: 16px; background: var(--accent); color: var(--accent-ink); font: 700 16px/1 var(--body); transition: transform .25s var(--spring), background .2s, box-shadow .25s, opacity .2s; box-shadow: 0 2px 0 var(--accent-deep), 0 14px 30px -14px rgba(255, 79, 139, .55); }
   .btn:hover { transform: translateY(-2px); background: #FF6A9D; }
   .btn:active { transform: translateY(1px); }
-  .btn svg { width: 20px; height: 20px; fill: currentColor; flex: none; }
+  .btn svg { width: 20px; height: 20px; fill: currentColor; flex: none; transition: rotate .35s var(--spring), translate .3s var(--spring); }
+  .btn:hover > svg:not(.flip) { rotate: -12deg; }
+  .btn:hover > .flip, .svc-book:hover .flip { translate: calc(4px * var(--dir)) 0; }
   .btn.ghost { background: transparent; color: var(--ink); box-shadow: inset 0 0 0 1.5px var(--line); }
   .btn.ghost:hover { box-shadow: inset 0 0 0 1.5px var(--ink); background: transparent; }
   .btn.wait { opacity: .45; box-shadow: none; }
@@ -129,18 +134,40 @@
 
   /* The line-up: cut-out pets standing on the moving yellow floor */
   .lineup { position: relative; z-index: 2; align-self: end; width: min(100% - 2 * var(--gutter), 520px); margin: 26px auto 0; height: clamp(230px, 36vh, 360px); }
-  .pet { position: absolute; bottom: var(--b, 0px); inset-inline-start: var(--x); height: var(--h); z-index: var(--z, 1); transform: translateY(var(--py, 0px)); will-change: transform; }
-  .pet img { height: 100%; width: auto; max-width: none; filter: drop-shadow(0 18px 18px rgba(58, 18, 48, .26)); animation: hop 1s var(--spring) var(--d, 0s) backwards; transition: transform .45s var(--spring); transform-origin: 50% 100%; }
+  .pet { position: absolute; bottom: var(--b, 0px); inset-inline-start: var(--x); height: var(--h); z-index: var(--z, 1); transform: translateY(var(--py, 0px)); will-change: transform; cursor: pointer; }
+  .pet.boing { animation: boing .6s var(--ease); }
+  @keyframes boing { 30% { translate: 0 -16%; } 55% { translate: 0 0; } 72% { translate: 0 -5%; } }
+  .pet img { height: 100%; width: auto; max-width: none; filter: drop-shadow(0 18px 18px rgba(58, 18, 48, .26)); animation: hop 1.1s var(--bounce) var(--d, 0s) backwards, breathe var(--br, 4s) ease-in-out calc(var(--d, 0s) + 1.1s) infinite; transition: transform .45s var(--spring), rotate .8s var(--ease); transform-origin: 50% 100%; rotate: var(--lean, 0deg); }
   .pet::after { content: ''; position: absolute; z-index: -1; inset-inline: 10%; bottom: -12px; height: 24px; border-radius: 50%; background: radial-gradient(closest-side, rgba(58, 18, 48, .5), transparent); }
   .pet:hover img { transform: translateY(-14px) rotate(-2deg); }
-  @keyframes hop { from { transform: translateY(70%) scale(.86); opacity: 0; } 60% { opacity: 1; } to { transform: none; opacity: 1; } }
-  .floor { position: relative; z-index: 1; height: var(--floor); background: var(--accent); color: var(--accent-ink); display: flex; align-items: center; overflow: hidden; direction: ltr; }
+  @keyframes hop {
+    0% { transform: translateY(80%) scale(.8, .9); opacity: 0; }
+    45% { transform: translateY(-9%) scale(.96, 1.05); opacity: 1; }
+    68% { transform: translateY(0) scale(1.07, .92); }
+    84% { transform: translateY(-2%) scale(.99, 1.02); }
+    100% { transform: none; opacity: 1; }
+  }
+  @keyframes breathe { 50% { scale: 1.012 1.028; } }
+  .say { position: absolute; z-index: 5; bottom: 100%; left: 50%; translate: -50% 0; margin-bottom: 4px; padding: 9px 15px; border-radius: 16px; background: #fff; color: var(--ink); font: 800 17px/1 var(--display); white-space: nowrap; box-shadow: 0 12px 26px -12px rgba(58, 18, 48, .4); pointer-events: none; transform-origin: 50% 130%; animation: say 1.7s var(--spring) forwards; }
+  .say::after { content: ''; position: absolute; left: 50%; top: 100%; width: 12px; height: 12px; translate: -50% -55%; rotate: 45deg; border-radius: 2px; background: inherit; }
+  @keyframes say { 0% { opacity: 0; transform: scale(.4) translateY(12px); } 14%, 80% { opacity: 1; transform: none; } 100% { opacity: 0; transform: translateY(-10px); } }
+  .floor { animation: floorIn .8s var(--ease) .05s backwards; position: relative; z-index: 1; height: var(--floor); background: var(--accent); color: var(--accent-ink); display: flex; align-items: center; overflow: hidden; direction: ltr; }
   .floor::before { content: ''; position: absolute; inset: 0 0 auto; height: 10px; background: linear-gradient(rgba(58, 18, 48, .16), transparent); }
   .track { display: flex; flex: none; animation: slide 40s linear infinite; }
   .track span { font: 800 clamp(22px, 3vw, 38px)/1 var(--display); letter-spacing: -.03em; white-space: nowrap; padding-inline: 22px; display: inline-flex; align-items: center; gap: 44px; }
   .track span::after { content: ''; width: 12px; height: 12px; border-radius: 50%; background: var(--accent-ink); }
   html[lang="ar"] .track span { letter-spacing: 0; }
   @keyframes slide { to { transform: translateX(-50%); } }
+  @keyframes floorIn { from { transform: translateY(100%); } }
+  .intro { animation: rise .9s var(--ease) var(--d, 0s) backwards; }
+  @keyframes rise { from { opacity: 0; transform: translateY(30px); } }
+  .hero h1 .serif, .h2.rv .serif { display: inline-block; transform-origin: 30% 80%; }
+  .hero h1 .serif { animation: wordpop 1s var(--spring) .55s backwards; }
+  .h2.rv.in .serif { animation: wordpop 1s var(--spring) calc(var(--d, 0s) + .3s) backwards; }
+  @keyframes wordpop { from { opacity: 0; transform: scale(.4) rotate(-10deg); } 55% { opacity: 1; } }
+  .gchip .stars svg { animation: starPop .5s var(--spring) calc(1.05s + var(--i, 0) * .08s) backwards; }
+  .rating.in .stars svg { animation: starPop .5s var(--spring) calc(.5s + var(--i, 0) * .09s) backwards; }
+  @keyframes starPop { from { opacity: 0; transform: scale(0) rotate(-45deg); } }
 
   @media (max-width: 999px) {
     .hero-copy { padding-top: 96px; }
@@ -188,9 +215,13 @@
   .svc { position: relative; display: flex; flex-direction: column; background: var(--bg-2); border-radius: var(--r); box-shadow: inset 0 0 0 1px var(--line), var(--lift); transition: transform .35s var(--ease), box-shadow .35s; }
   .svc:hover { transform: translateY(-4px); box-shadow: inset 0 0 0 1.5px rgba(255, 79, 139, .6), var(--lift); }
   .svc-stage { position: relative; height: 210px; margin: 14px 14px 0; }
-  .svc-stage::before { content: ''; position: absolute; inset: 0; border-radius: 120px 120px 18px 18px; background: radial-gradient(90% 80% at 50% 100%, #FF8FB4, var(--accent) 60%, var(--accent-deep)); }
-  .svc-stage img { position: absolute; bottom: 0; left: 50%; height: 130%; width: auto; max-width: 108%; object-fit: contain; object-position: bottom; transform: translateX(-50%); transform-origin: 50% 100%; transition: transform .5s var(--spring); filter: drop-shadow(0 14px 16px rgba(58, 18, 48, .35)); }
-  .svc:hover .svc-stage img { transform: translateX(-50%) translateY(-8px) scale(1.04); }
+  .svc-stage::before { content: ''; position: absolute; inset: 0; transform-origin: 50% 100%; border-radius: 120px 120px 18px 18px; background: radial-gradient(90% 80% at 50% 100%, #FF8FB4, var(--accent) 60%, var(--accent-deep)); }
+  .svc-stage img { position: absolute; bottom: 0; left: 50%; height: 130%; width: auto; max-width: 108%; object-fit: contain; object-position: bottom; translate: -50% 0; transform-origin: 50% 100%; transition: transform .5s var(--spring); filter: drop-shadow(0 14px 16px rgba(58, 18, 48, .35)); }
+  .svc.in .svc-stage::before { animation: archIn .8s var(--ease) var(--d, 0s) backwards; }
+  .svc.in .svc-stage img { animation: popUp 1s var(--bounce) calc(var(--d, 0s) + .25s) backwards; }
+  @keyframes archIn { from { opacity: 0; transform: scaleY(.25); } }
+  @keyframes popUp { 0% { opacity: 0; transform: scale(.3); } 50% { opacity: 1; transform: translateY(-6%) scale(1.08, 1.03); } 72% { transform: scale(.97, 1.03); } 100% { transform: none; } }
+  .svc:hover .svc-stage img { transform: translateY(-8px) scale(1.04); }
   .svc-body { display: flex; flex-direction: column; gap: 10px; padding: 24px; flex: 1; }
   .svc .no { font: 700 13px/1 var(--body); color: var(--faint); letter-spacing: .1em; }
   .svc h3 { font: 700 clamp(24px, 2.2vw, 29px)/1.08 var(--display); letter-spacing: -.03em; }
@@ -219,13 +250,17 @@
   .summary li { display: grid; grid-template-columns: 80px 1fr; gap: 12px; padding: 13px 0; border-bottom: 1.5px solid rgba(58, 18, 48, .16); font-size: 15px; }
   .summary li span { color: rgba(58, 18, 48, .6); font-weight: 500; }
   .summary li b { font-weight: 700; }
+  .summary li b.flash { animation: flash .6s var(--spring); }
+  @keyframes flash { from { opacity: 0; transform: translateX(calc(-12px * var(--dir))); } }
   .summary li b:empty::before { content: '—'; color: rgba(58, 18, 48, .35); font-weight: 500; }
   .booking-wrap { position: relative; margin-top: clamp(120px, 14vw, 190px); }
   .booking-wrap .booking { position: relative; z-index: 1; }
   .b-peek { position: absolute; z-index: 0; bottom: calc(100% - 64px); inset-inline-end: clamp(28px, 8%, 120px); height: clamp(170px, 17vw, 250px); width: auto; filter: drop-shadow(0 -6px 24px rgba(58, 18, 48, .18)); transition: transform .5s var(--spring); transform-origin: 50% 100%; }
-  html[dir="rtl"] .b-peek { transform: scaleX(-1); }
-  .booking-wrap:hover .b-peek { transform: translateY(-10px) rotate(2deg); }
-  html[dir="rtl"] .booking-wrap:hover .b-peek { transform: scaleX(-1) translateY(-10px) rotate(2deg); }
+  html[dir="rtl"] .b-peek { scale: -1 1; }
+  .booking-wrap:hover .b-peek { transform: translateY(-10px); }
+  .booking-wrap.in .b-peek { animation: peekUp 1s var(--spring) .35s backwards, wave 3.4s ease-in-out 1.6s infinite; }
+  @keyframes peekUp { from { transform: translateY(80%); } }
+  @keyframes wave { 0%, 55%, 100% { rotate: 0deg; } 64% { rotate: -6deg; } 73% { rotate: 5deg; } 82% { rotate: -4deg; } 90% { rotate: 2deg; } }
 
   .b-main { padding: clamp(24px, 4vw, 48px); display: flex; flex-direction: column; min-width: 0; }
   .progress { display: grid; grid-template-columns: repeat(6, 1fr); gap: 6px; }
@@ -250,7 +285,8 @@
   .opt input { position: absolute; opacity: 0; pointer-events: none; }
   .opt-body { display: flex; align-items: center; gap: 14px; min-height: 64px; padding: 14px 16px; border-radius: 18px; background: var(--bg-3); box-shadow: inset 0 0 0 1.5px var(--line); transition: box-shadow .2s, background .2s; }
   .opt:hover .opt-body { box-shadow: inset 0 0 0 1.5px rgba(58, 18, 48, .35); }
-  .opt input:checked + .opt-body { box-shadow: inset 0 0 0 2px var(--accent); background: rgba(255, 79, 139, .08); }
+  .opt input:checked + .opt-body { box-shadow: inset 0 0 0 2px var(--accent); background: rgba(255, 79, 139, .08); animation: pick .45s var(--spring); }
+  @keyframes pick { from { transform: scale(.94); } }
   .opt input:focus-visible + .opt-body { outline: 3px solid var(--accent-text); outline-offset: 3px; }
   .opt input:disabled + .opt-body { opacity: .3; cursor: not-allowed; }
   .opt-body .t { display: grid; gap: 3px; min-width: 0; }
@@ -374,6 +410,10 @@
   .cat-stage .a { left: 0; height: 84%; }
   .cat-stage .b { right: 4%; height: 100%; }
   .cat-stage img:hover { transform: translateY(-10px); }
+  .cat-stage::before { transform-origin: 50% 100%; }
+  .cat-stage.in::before { animation: archIn .8s var(--ease) backwards; }
+  .cat-stage.in .a { animation: popUp 1s var(--bounce) .25s backwards; }
+  .cat-stage.in .b { animation: popUp 1s var(--bounce) .45s backwards; }
   .checks { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 12px 20px; margin: 28px 0 32px; }
   .checks li { display: flex; gap: 10px; align-items: center; font-weight: 500; }
 
@@ -382,6 +422,8 @@
   .gallery::-webkit-scrollbar { display: none; }
   .gallery .framed { aspect-ratio: 3 / 4; scroll-snap-align: center; transform: rotate(var(--rot, 0deg)); transition: transform .45s var(--spring); }
   .gallery .framed:hover { transform: rotate(0deg); }
+  .gallery.in .framed { animation: deal .9s var(--spring) calc(var(--i, 0) * .09s) backwards; }
+  @keyframes deal { from { opacity: 0; transform: translateY(90px) rotate(calc(var(--rot, 0deg) * -4)); } }
   .gallery .framed::before { transform: translate(12px, 12px); }
   html[dir="rtl"] .gallery .framed::before { transform: translate(-12px, 12px); }
 
@@ -421,6 +463,11 @@
   .giant.mirror { position: absolute; inset: 100% 0 auto; z-index: 1; transform: scaleY(-1); opacity: .14; -webkit-mask-image: linear-gradient(to top, #000, transparent 50%); mask-image: linear-gradient(to top, #000, transparent 50%); pointer-events: none; }
   .peek { position: absolute; z-index: 1; bottom: 62%; width: auto; transition: transform .5s var(--spring); transform-origin: 50% 100%; }
   .peek:hover { transform: translateY(-14px); }
+  .giant-wrap.in .peek { animation: peekUp 1s var(--spring) .2s backwards; }
+  .giant-wrap.in .peek.p2 { animation-delay: .45s; }
+  .giant i { position: relative; }
+  .giant-wrap.in .giant:not(.mirror) i { animation: dotDrop 1.1s var(--ease) .6s backwards; }
+  @keyframes dotDrop { 0% { opacity: 0; top: -1.1em; } 45% { opacity: 1; top: 0; } 62% { top: -.22em; } 78% { top: 0; } 90% { top: -.06em; } 100% { top: 0; } }
   .peek.p1 { left: 13%; height: clamp(96px, 14vw, 240px); }
   .peek.p2 { left: 62%; height: clamp(80px, 11.5vw, 196px); }
   .foot { position: relative; z-index: 3; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 14px 30px; padding-block: 34px 120px; color: var(--faint); font-size: 14px; border-top: 1px solid var(--line); }
@@ -462,25 +509,25 @@
 <header class="hero" id="top">
   <div class="grain"></div>
   <div class="hero-copy wrap">
-    <p class="status" id="status"><span class="dot" aria-hidden="true"></span><span id="status-now"></span><span data-ar="جميرا فيلج سيركل، دبي">JVC, Dubai</span></p>
-    <h1 class="mega" data-ar='دلّع <span class="serif">صاحبك</span> الفروي.'>Fresh cuts for <span class="serif">furry</span> friends.</h1>
-    <p class="lede" data-ar="كلاب وقطط وحيوانات صغيرة، نعتني فيها في محلنا في JVC أو نجيك بسيارة التجميل لين باب بيتك. اختار الموعد واحجز على واتساب بأقل من دقيقة.">Dogs, cats and small pets — groomed in our JVC shop or at your door by our grooming van. Pick a time and book on WhatsApp in under a minute.</p>
-    <div class="cta-row">
+    <p class="status intro" id="status" style="--d:.05s"><span class="dot" aria-hidden="true"></span><span id="status-now"></span><span data-ar="جميرا فيلج سيركل، دبي">JVC, Dubai</span></p>
+    <h1 class="mega intro" style="--d:.12s" data-ar='دلّع <span class="serif">صاحبك</span> الفروي.'>Fresh cuts for <span class="serif">furry</span> friends.</h1>
+    <p class="lede intro" style="--d:.24s" data-ar="كلاب وقطط وحيوانات صغيرة، نعتني فيها في محلنا في JVC أو نجيك بسيارة التجميل لين باب بيتك. اختار الموعد واحجز على واتساب بأقل من دقيقة.">Dogs, cats and small pets — groomed in our JVC shop or at your door by our grooming van. Pick a time and book on WhatsApp in under a minute.</p>
+    <div class="cta-row intro" style="--d:.34s">
       <a class="btn" href="#book"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg> <span data-ar="احجز موعد">Book a groom</span></a>
       <a class="btn ghost" href="#services" data-ar="شوف الأسعار">See prices</a>
     </div>
-    <a class="gchip" href="https://www.google.com/maps/place/Furry+Friends+JVC/@25.0470909,55.2061364,17z/data=!4m8!3m7!1s0x3e5f6dc907abf60d:0xa665965d3df1e7f7!8m2!3d25.0470909!4d55.2061364!9m1!1b1!16s%2Fg%2F11b6345433" target="_blank" rel="noopener">
+    <a class="gchip intro" style="--d:.44s" href="https://www.google.com/maps/place/Furry+Friends+JVC/@25.0470909,55.2061364,17z/data=!4m8!3m7!1s0x3e5f6dc907abf60d:0xa665965d3df1e7f7!8m2!3d25.0470909!4d55.2061364!9m1!1b1!16s%2Fg%2F11b6345433" target="_blank" rel="noopener">
       <b>4.3</b>
       <span class="stars" aria-hidden="true" data-stars="4.3"></span>
       <u data-ar="340 تقييم على Google">340 Google reviews</u>
     </a>
   </div>
   <div class="lineup" id="lineup" aria-hidden="true">
-    <span class="pet" style="--x:0%;--h:74%;--b:20px;--z:1;--p:.05"><img src="photos/c_poodle.webp" alt="" style="--d:.35s"></span>
-    <span class="pet" style="--x:24%;--h:100%;--b:30px;--z:1;--p:.1"><img src="photos/c_golden.webp" alt="" style="--d:.2s" fetchpriority="high"></span>
-    <span class="pet" style="--x:55%;--h:66%;--b:22px;--z:2;--p:.07"><img src="photos/c_kitten.webp" alt="" style="--d:.5s"></span>
-    <span class="pet" style="--x:12%;--h:52%;--b:-6px;--z:3;--p:.02"><img src="photos/c_bichon2.webp" alt="" style="--d:.65s"></span>
-    <span class="pet" style="--x:66%;--h:50%;--b:-8px;--z:3;--p:.03"><img src="photos/c_shihtzu.webp" alt="" style="--d:.8s"></span>
+    <span class="pet" style="--x:0%;--h:74%;--b:20px;--z:1;--p:.05" data-say="Fresh cut!" data-say-ar="قصة جديدة!"><img src="photos/c_poodle.webp" alt="" style="--d:.75s;--br:4.4s"></span>
+    <span class="pet" style="--x:24%;--h:100%;--b:30px;--z:1;--p:.1" data-say="Woof!" data-say-ar="هو هو!"><img src="photos/c_golden.webp" alt="" style="--d:.55s;--br:4.8s" fetchpriority="high"></span>
+    <span class="pet" style="--x:55%;--h:66%;--b:22px;--z:2;--p:.07" data-say="Meow." data-say-ar="مياو"><img src="photos/c_kitten.webp" alt="" style="--d:.95s;--br:3.6s"></span>
+    <span class="pet" style="--x:12%;--h:52%;--b:-6px;--z:3;--p:.02" data-say="Bath time?" data-say-ar="وقت الشاور؟"><img src="photos/c_bichon2.webp" alt="" style="--d:1.15s;--br:3.9s"></span>
+    <span class="pet" style="--x:66%;--h:50%;--b:-8px;--z:3;--p:.03" data-say="Book me!" data-say-ar="احجز لي!"><img src="photos/c_shihtzu.webp" alt="" style="--d:1.3s;--br:4.2s"></span>
   </div>
   <div class="floor" aria-hidden="true"><div class="track" id="track"></div></div>
 </header>
@@ -642,7 +689,7 @@
       <p class="kicker rv" data-ar="آراء العملاء على Google">What owners say on Google</p>
       <h2 class="sr" id="reviews-title" data-ar="التقييمات">Reviews</h2>
       <div class="rating rv" style="--d:.06s;margin-top:22px">
-        <span class="num">4.3</span>
+        <span class="num" data-count="4.3">4.3</span>
         <div class="of">
           <span class="stars" role="img" aria-label="4.3 out of 5 stars" data-stars="4.3"></span>
           <span data-ar="من 340 تقييم على Google">from 340 reviews on Google</span>
@@ -688,7 +735,7 @@
 
   <!-- Gallery -->
   <section aria-label="Photos" style="padding-bottom:clamp(60px,8vw,110px)">
-    <div class="gallery">
+    <div class="gallery io">
       <div class="framed" style="--rot:-2.5deg"><img src="photos/p_scissors.webp" alt="A white dog getting a trim with scissors" loading="lazy"></div>
       <div class="framed" style="--rot:2deg"><img src="photos/p_shake.webp" alt="A fluffy white dog shaking off water" loading="lazy"></div>
       <div class="framed" style="--rot:-1.5deg"><img src="photos/p_pugbath.webp" alt="A pug in the bath" loading="lazy"></div>
@@ -750,7 +797,7 @@
         <a class="btn ghost" href="tel:+971563334114" data-ar="اتصل فينا">Call us</a>
       </div>
     </div>
-    <div class="giant-wrap" aria-hidden="true">
+    <div class="giant-wrap io" aria-hidden="true">
       <img class="peek p1" src="photos/c_wave.webp" alt="" loading="lazy">
       <img class="peek p2" src="photos/c_pom.webp" alt="" loading="lazy">
       <div class="giant">Furry Friends<i>.</i></div>
@@ -813,7 +860,7 @@
   const starsHTML = (score, uid) => Array.from({ length: 5 }, (_, i) => {
     const fill = Math.round(Math.max(0, Math.min(1, score - i)) * 100);
     const id = `st-${uid}-${i}`;
-    return `<svg viewBox="0 0 24 24" aria-hidden="true"><defs><linearGradient id="${id}"><stop offset="${fill}%" stop-color="#FF4F8B"/><stop offset="${fill}%" stop-color="rgba(160,110,140,.4)"/></linearGradient></defs><path fill="url(#${id})" d="${STAR}"/></svg>`;
+    return `<svg viewBox="0 0 24 24" aria-hidden="true" style="--i:${i}"><defs><linearGradient id="${id}"><stop offset="${fill}%" stop-color="#FF4F8B"/><stop offset="${fill}%" stop-color="rgba(160,110,140,.4)"/></linearGradient></defs><path fill="url(#${id})" d="${STAR}"/></svg>`;
   }).join('');
   $$('[data-stars]').forEach((el, n) => { el.innerHTML = starsHTML(Number(el.dataset.stars), n); });
 
@@ -974,6 +1021,14 @@
     6: !!state.name.trim() && (state.where !== 'home' || !!state.address.trim()),
   })[n];
 
+  // A summary line that changes slides in again.
+  const put = (sel, text) => {
+    const el = $(sel);
+    if (el.textContent === text) return;
+    el.textContent = text;
+    el.classList.remove('flash');
+    if (text) { void el.offsetWidth; el.classList.add('flash'); }
+  };
   // What changes as people choose (the options they're using aren't drawn again).
   const refresh = () => {
     const n = state.step;
@@ -983,11 +1038,11 @@
     $('#f-address').hidden = state.where !== 'home';
     $('#size-wrap').hidden = state.kind !== 'dog';
     if (valid(n)) $('#hint').textContent = '';
-    $('#s-where').textContent = state.where ? T(state.where === 'shop' ? 'At the shop' : 'At home', state.where === 'shop' ? 'في المحل' : 'عند البيت') : '';
-    $('#s-pet').textContent = [kindText(), state.petName.trim()].filter(Boolean).join(' · ');
-    $('#s-service').textContent = svc() ? T(svc().en, svc().ar)[0] : '';
-    $('#s-when').textContent = whenText();
-    $('#s-name').textContent = state.name.trim();
+    put('#s-where', state.where ? T(state.where === 'shop' ? 'At the shop' : 'At home', state.where === 'shop' ? 'في المحل' : 'عند البيت') : '');
+    put('#s-pet', [kindText(), state.petName.trim()].filter(Boolean).join(' · '));
+    put('#s-service', svc() ? T(svc().en, svc().ar)[0] : '');
+    put('#s-when', whenText());
+    put('#s-name', state.name.trim());
   };
   // Showing a step.
   const paintStep = (focus) => {
@@ -1116,14 +1171,67 @@
   setInterval(paintStatus, 60000);
 
   // ── Scroll: reveals, the nav, the book bar, pets drifting at different speeds ──
+  const countUp = (el) => {
+    const to = Number(el.dataset.count), t0 = performance.now();
+    const step = (t) => {
+      const k = Math.min(1, (t - t0) / 1300);
+      el.textContent = (to * (1 - (1 - k) ** 3)).toFixed(1);
+      if (k < 1) requestAnimationFrame(step);
+    };
+    if (!still) requestAnimationFrame(step);
+  };
   const io = new IntersectionObserver((entries) => entries.forEach((en) => {
-    if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); }
+    if (!en.isIntersecting) return;
+    en.target.classList.add('in');
+    $$('[data-count]', en.target).forEach(countUp);
+    io.unobserve(en.target);
   }), { rootMargin: '0px 0px -8% 0px' });
-  $$('.rv').forEach((el) => io.observe(el));
+  $$('.gallery .framed').forEach((f, i) => f.style.setProperty('--i', i));
+  $$('.rv, .io').forEach((el) => io.observe(el));
   const nav = $('#nav'), dock = $('#dock'), pets = $$('.pet'), book = $('#book');
+  // Tap a pet: it bounces and says something.
+  pets.forEach((p) => p.addEventListener('click', () => {
+    p.querySelector('.say')?.remove();
+    const say = document.createElement('span');
+    say.className = 'say';
+    say.textContent = T(p.dataset.say, p.dataset.sayAr);
+    p.append(say);
+    setTimeout(() => say.remove(), 1700);
+    p.classList.remove('boing');
+    void p.offsetWidth;
+    p.classList.add('boing');
+  }));
+  // On a computer the pets lean a little toward the pointer.
+  if (!still && matchMedia('(pointer: fine)').matches) {
+    let leaning = false;
+    addEventListener('pointermove', (e) => {
+      if (leaning || scrollY > innerHeight) return;
+      leaning = true;
+      requestAnimationFrame(() => {
+        pets.forEach((p) => {
+          const r = p.getBoundingClientRect();
+          p.style.setProperty('--lean', `${(((e.clientX - (r.left + r.width / 2)) / innerWidth) * 9).toFixed(2)}deg`);
+        });
+        leaning = false;
+      });
+    }, { passive: true });
+  }
+  // The words on the floor speed up with scrolling, and run backwards when scrolling up.
+  const marquee = still ? null : $('#track').getAnimations()[0];
+  let rate = 1, settling = false, lastY = scrollY;
+  const settle = () => {
+    rate += (1 - rate) * 0.07;
+    if (Math.abs(rate - 1) < 0.02) { rate = 1; settling = false; } else requestAnimationFrame(settle);
+    marquee.playbackRate = rate;
+  };
   let ticking = false;
   const onScroll = () => {
     const y = scrollY;
+    if (marquee && y < innerHeight * 1.5) {
+      rate = Math.max(-6, Math.min(8, rate + (y - lastY) / 12));
+      if (!settling) { settling = true; requestAnimationFrame(settle); }
+    }
+    lastY = y;
     nav.classList.toggle('solid', y > 30);
     const b = book.getBoundingClientRect();
     dock.classList.toggle('show', y > innerHeight * 0.8 && !(b.top < innerHeight && b.bottom > 0));
